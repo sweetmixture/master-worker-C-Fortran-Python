@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/tf.x.dir/develop/unit_test.c.o.d"
   "CMakeFiles/tf.x.dir/main.c.o"
   "CMakeFiles/tf.x.dir/main.c.o.d"
+  "CMakeFiles/tf.x.dir/master_worker_task.c.o"
+  "CMakeFiles/tf.x.dir/master_worker_task.c.o.d"
   "CMakeFiles/tf.x.dir/subprogram/subprogram_pi.c.o"
   "CMakeFiles/tf.x.dir/subprogram/subprogram_pi.c.o.d"
   "CMakeFiles/tf.x.dir/taskfarm_def.c.o"

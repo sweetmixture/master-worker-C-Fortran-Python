@@ -12,6 +12,8 @@
 
 //#include "subprogram.h"
 
+#include "taskfarm_def.h"
+
 void unittest_tf_config_workgroup_array( MPI_Comm* comm, const int n_comm, const int comm_tag )
 {
         int size,rank;
@@ -35,7 +37,35 @@ void unittest_tf_config_workgroup_array( MPI_Comm* comm, const int n_comm, const
                         printf(" master comm tag  : %d\n",comm_tag);
                 }
         }
-
         return;
 }
 
+// dependency: taskfarm_def.h - WorkgroupConfig
+void unittest_tf_get_workgroup_config( 
+	const MPI_Comm* base_comm, 
+	const MPI_Comm* workgroup_comm,
+	const WorkgroupConfig* wc,
+	const int n_workgroup,
+	const int workgroup_tag
+)
+{
+	int bsize,brank;
+	int workgroup_size,worker_rank;
+
+	MPI_Comm_size(*base_comm,&bsize);
+	MPI_Comm_rank(*base_comm,&brank);
+
+	MPI_Comm_size(*workgroup_comm,&workgroup_size);
+	MPI_Comm_rank(*workgroup_comm,&worker_rank);
+
+	if( brank == 0 ){ printf("Unit Test: unittest_tf_get_workgroup_config\n"); }
+
+	for(int i=0;i<n_workgroup;i++){
+		if( workgroup_tag == i  && worker_rank == 0 ){
+			printf("[ i, wg_comm_tag, wg_comm_size, worker_rank, base_rank ] : [ %d, %d, %d, %d, %d ]\n", \
+				i, wc[i].workgroup_tag, wc[i].workgroup_size, wc[i].worker_rank, brank );
+		}
+	}
+
+	return;
+}

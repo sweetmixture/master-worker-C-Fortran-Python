@@ -1,5 +1,5 @@
 CMakeFiles/tf.x.dir/subprogram/subprogram_pi.c.o: \
- /home/uccawkj/Software/multiprocessing/mpi/C/master_worker/multiprocess_worker/subprogram/subprogram_pi.c \
+ /home/uccawkj/Software/master-worker-C-Fortran-Python/mpi/C/master_worker/multiprocess_worker/subprogram/subprogram_pi.c \
  /usr/include/stdc-predef.h /usr/include/stdio.h /usr/include/features.h \
  /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
  /usr/include/gnu/stubs-64.h \

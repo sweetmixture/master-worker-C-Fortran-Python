@@ -1,4 +1,4 @@
-# Install script for directory: /home/uccawkj/Software/multiprocessing/mpi/C/master_worker/multiprocess_worker
+# Install script for directory: /home/uccawkj/Software/master-worker-C-Fortran-Python/mpi/C/master_worker/multiprocess_worker
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/uccawkj/Software/multiprocessing/mpi/C/master_worker/multiprocess_worker/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/uccawkj/Software/master-worker-C-Fortran-Python/mpi/C/master_worker/multiprocess_worker/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

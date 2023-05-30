@@ -8,7 +8,6 @@ project(
 	LANGUAGES C)
 
 # set( [ARG] [VAR1] [VAR2] ... )
-# set(SRC main.c taskfarm_def.h) -> no header !
 
 find_package(MPI REQUIRED)
 # MPI_LIBRARIES
@@ -25,7 +24,7 @@ message(STATUS "C Compiler Version: ${C_COMPILER_VERSION}")
 
 # EDIT BLOCK --------------------------------------------------
 
-set(SRC main.c taskfarm_def.c)
+set(SRC main.c taskfarm_def.c master_worker_task.c)
 set(SRC_DEV ${CMAKE_SOURCE_DIR}/develop/unit_test.c)
 set(SRC_SUBPROGRAM ${CMAKE_SOURCE_DIR}/subprogram/subprogram_pi.c)
 
@@ -33,6 +32,7 @@ set(EXE tf.x)
 
 # header file path: include_directories( [EXECUTABLE] PUBLIC [PATH1] [PATH2] ... ) 
 #include_directories(${EXE} PUBLIC ${CMAKE_SOURCE_DIR}/includes ${CMAKE_SOURCE_DIR}/develop/includes ${CMAKE_SOURCE_DIR}/subprogram/includes)
+
 include_directories(${EXE} PUBLIC ${CMAKE_SOURCE_DIR}/includes)
 include_directories(${EXE} PUBLIC ${CMAKE_SOURCE_DIR}/develop/includes)
 include_directories(${EXE} PUBLIC ${CMAKE_SOURCE_DIR}/subprogram/includes)

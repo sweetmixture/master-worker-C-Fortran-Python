@@ -1,3 +1,0 @@
-pid: 223 ntasks: 4 rank: 0 start: 2023-05-29 15:32:54.task_id_223 
-pid: 223 ntasks: 875772209 rank: 0 start/end: 2023-05-29 15:32:54.task_id_223/2023-05-29 15:34:23.193479 elapsedd_t: 88.289 
-Approximate value of pi: 0.0000000143 / Elapsed time: 88.289 seconds

@@ -9,23 +9,16 @@
 #ifndef __TASKFARM_DEF
 #define __TASKFARM_DEF
 
-// Basic defines -------
-
-#define _IN
-#define _OUT
-#define _IO
-
-// ---------------------
-
 #define TF_WORKTAG 1
 #define TF_DIETAG  2
-
 #define TF_CPUS_PER_WORKER 4
+
+#include <mpi.h>
 
 typedef struct WorkgroupConfig_{
 
 	int base_size;
-	int base_rank;
+	int base_rank;		// base_comm rank of the head (rank) of the workgroup
 	int workgroup_tag;
 	int workgroup_size;
 	int worker_rank;

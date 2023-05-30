@@ -33,7 +33,7 @@ void getCurrentDateTime(char *dateTimeStr) {
 }
 
 
-void subprogram_pi( MPI_Comm* comm, const int pid )
+void subprogram_pi( const MPI_Comm* comm, const int task_id )
 {
 	int rank, size, i, N, N_local, N_inside = 0, N_total_inside;
 	double x, y, pi_local, pi_total, t_start, t_end;
@@ -53,20 +53,20 @@ void subprogram_pi( MPI_Comm* comm, const int pid )
 	//N = 999999999;  // Number of points to generate
 	N_local = N / size;  // Number of points to generate per process
 	//Seed the random number generator based on the rank
-	srand(rank + pid);
+	srand(rank + task_id);
 	
 	t_start = get_time();
 	getCurrentDateTime(start_timestamp);
 
-	sprintf(file_name,"task_id_%d",pid);
+	sprintf(file_name,"task_id_%d",task_id);
 
 	if( rank == 0 ){
 		fileptr = fopen(file_name,"w");
 	}
 
 	if( rank == 0 ){
-		fprintf(fileptr,"pid: %d ntasks: %d rank: %d start: %s \n",pid, size,rank,start_timestamp);
-		printf("pid: %d ntasks: %d rank: %d start: %s \n",pid, size,rank,start_timestamp);
+		//fprintf(fileptr,"task_id: %d ntasks: %d rank: %d start: %s \n",task_id, size,rank,start_timestamp);
+		//printf("task_id: %d ntasks: %d rank: %d start: %s \n",task_id, size,rank,start_timestamp);
 	}
 
 	for(iter = 0; iter < iter_max; iter++ ){
@@ -110,17 +110,19 @@ void subprogram_pi( MPI_Comm* comm, const int pid )
 	MPI_Comm_size(*comm,&size);
 
 	if( rank == 0){
-		fprintf(fileptr,"pid: %d ntasks: %d rank: %d start/end: %s/%s elapsed_t: %.3f \n",pid,size,rank,start_timestamp,end_timestamp,t_end - t_start);
-		printf("pid: %d ntasks: %d rank: %d start/end: %s/%s elapsed_t: %.3f \n",pid,size,rank,start_timestamp,end_timestamp,t_end - t_start);
+		//fprintf(fileptr,"task_id: %d ntasks: %d rank: %d start/end: %s  /  %s : \t ",task_id,size,rank,start_timestamp,end_timestamp);
+		fprintf(fileptr,"{'task_id': %d, 'ntasks': %d, 'timing': {'start': '%s', 'end': '%s', 'elapsed_t': %.6lf }, ",task_id,size,start_timestamp,end_timestamp,t_end - t_start);
+		//printf("task_id: %d ntasks: %d rank: %d start/end: %s/%s elapsed_t: %.3f \n",task_id,size,rank,start_timestamp,end_timestamp,t_end - t_start);
 	}
 
 	// Output the final estimate of pi from the root process
 	if (rank == 0) {
 		pi_total /= size;
-		fprintf(fileptr,"Approximate value of pi: %.10f / ", pi_total);
-		fprintf(fileptr,"Elapsed time: %.3f seconds\n", t_end - t_start);
-		printf("Approximate value of pi: %.10f / ", pi_total);
-		printf("Elapsed time: %.3f seconds\n", t_end - t_start);
+		fprintf(fileptr," 'result' : %.8lf }\n",pi_total);
+		//fprintf(fileptr,"Approximate value of pi: %.10f / ", pi_total);
+		//fprintf(fileptr,"Elapsed time: %.3f seconds\n", t_end - t_start);
+		//printf("Approximate value of pi: %.10f / ", pi_total);
+		//printf("Elapsed time: %.3f seconds\n", t_end - t_start);
 	}
 	if( rank == 0 ){ fclose(fileptr); }
 	free(data);

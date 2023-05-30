@@ -54,10 +54,10 @@ RM = /lustre/shared/ucl/apps/cmake/3.21.1/gnu-4.9.2/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/uccawkj/Software/multiprocessing/mpi/C/master_worker/multiprocess_worker
+CMAKE_SOURCE_DIR = /home/uccawkj/Software/master-worker-C-Fortran-Python/mpi/C/master_worker/multiprocess_worker
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/uccawkj/Software/multiprocessing/mpi/C/master_worker/multiprocess_worker/build
+CMAKE_BINARY_DIR = /home/uccawkj/Software/master-worker-C-Fortran-Python/mpi/C/master_worker/multiprocess_worker/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -81,14 +81,14 @@ clean: CMakeFiles/tf.x.dir/clean
 CMakeFiles/tf.x.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tf.x.dir/build.make CMakeFiles/tf.x.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tf.x.dir/build.make CMakeFiles/tf.x.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/uccawkj/Software/multiprocessing/mpi/C/master_worker/multiprocess_worker/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target tf.x"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/uccawkj/Software/master-worker-C-Fortran-Python/mpi/C/master_worker/multiprocess_worker/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target tf.x"
 .PHONY : CMakeFiles/tf.x.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/tf.x.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/uccawkj/Software/multiprocessing/mpi/C/master_worker/multiprocess_worker/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/uccawkj/Software/master-worker-C-Fortran-Python/mpi/C/master_worker/multiprocess_worker/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tf.x.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/uccawkj/Software/multiprocessing/mpi/C/master_worker/multiprocess_worker/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/uccawkj/Software/master-worker-C-Fortran-Python/mpi/C/master_worker/multiprocess_worker/build/CMakeFiles 0
 .PHONY : CMakeFiles/tf.x.dir/rule
 
 # Convenience name for target.

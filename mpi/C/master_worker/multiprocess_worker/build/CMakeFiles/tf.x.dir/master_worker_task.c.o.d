@@ -1,5 +1,5 @@
-CMakeFiles/tf.x.dir/main.c.o: \
- /home/uccawkj/Software/master-worker-C-Fortran-Python/mpi/C/master_worker/multiprocess_worker/main.c \
+CMakeFiles/tf.x.dir/master_worker_task.c.o: \
+ /home/uccawkj/Software/master-worker-C-Fortran-Python/mpi/C/master_worker/multiprocess_worker/master_worker_task.c \
  /usr/include/stdc-predef.h /usr/include/stdio.h /usr/include/features.h \
  /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
  /usr/include/gnu/stubs-64.h \
@@ -16,5 +16,4 @@ CMakeFiles/tf.x.dir/main.c.o: \
  /shared/ucl/apps/intel/2018.Update3/impi/2018.3.222/include64/mpio.h \
  /home/uccawkj/Software/master-worker-C-Fortran-Python/mpi/C/master_worker/multiprocess_worker/includes/taskfarm_def.h \
  /home/uccawkj/Software/master-worker-C-Fortran-Python/mpi/C/master_worker/multiprocess_worker/includes/master_worker_task.h \
- /home/uccawkj/Software/master-worker-C-Fortran-Python/mpi/C/master_worker/multiprocess_worker/subprogram/includes/subprogram.h \
- /home/uccawkj/Software/master-worker-C-Fortran-Python/mpi/C/master_worker/multiprocess_worker/develop/includes/unit_test.h
+ /home/uccawkj/Software/master-worker-C-Fortran-Python/mpi/C/master_worker/multiprocess_worker/subprogram/includes/subprogram.h

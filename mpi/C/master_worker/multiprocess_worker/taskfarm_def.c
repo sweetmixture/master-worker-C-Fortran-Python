@@ -10,6 +10,7 @@
 #include <mpi.h>
 #include "taskfarm_def.h"
 
+// Comm Spliter
 int tf_config_workgroup( 
 	MPI_Comm* base_comm,
 	MPI_Comm* workgroup_comm,
@@ -62,11 +63,11 @@ int tf_config_workgroup(
 }
 
 void tf_get_workgroup_config(
-	const MPI_Comm* base_comm,
-	const MPI_Comm* workgroup_comm,
-	WorkgroupConfig* workgroup_config,
-	const int n_workgroup,
-	const int workgroup_tag
+	const MPI_Comm* base_comm,		// IN
+	const MPI_Comm* workgroup_comm,		// IN
+	WorkgroupConfig* workgroup_config,	// IN-OUT
+	const int n_workgroup,			// IN
+	const int workgroup_tag			// IN
 	)
 {
 /*
@@ -95,21 +96,19 @@ void tf_get_workgroup_config(
 	MPI_Request request;
 	MPI_Status status;
 
-
-	// Send message to brank 0 about workgroup_config
+	/*
+		For each workgroup call 'MPI_Send' by it's head rank, send 'WorkgroupConfig' to base_root
+	*/
 	for(int i=1;i<n_workgroup;i++){
-		for(int j=0;j<bsize;j++){
-			if( brank == j ){
-				// output all ranks (base) getting only the head workers from each workgroups
-				if( workgroup_tag == i && worker_rank == 0 ){
-					MPI_Send(&wc,sizeof(WorkgroupConfig),MPI_CHAR,base_root,i,*base_comm);
-					//printf("SEND> workgroup_tag: %d worker_rank: %d / %d (worgroup_size) base_rank: %d\n",workgroup_tag,worker_rank,workgroup_size,brank);
-				}
-			}
+		if( workgroup_tag == i && worker_rank == 0 ){
+			MPI_Send(&wc,sizeof(WorkgroupConfig),MPI_CHAR,base_root,i,*base_comm);
+			//printf("SEND> workgroup_tag: %d worker_rank: %d / %d (worgroup_size) base_rank: %d\n",workgroup_tag,worker_rank,workgroup_size,brank);
 		}
 	}
 
-	// Recv workgroup_config info
+	/*
+ 		Call 'MPI_Recv' by base_root 'n_workgroup' times to get 'WorkgroupConfig' except the base_root
+	*/
 	for(int i=1;i<n_workgroup;i++){
 		if( brank == base_root ){
 				MPI_Recv(&workgroup_config[i],sizeof(WorkgroupConfig),MPI_CHAR,MPI_ANY_SOURCE,i,*base_comm,&status);
@@ -117,12 +116,14 @@ void tf_get_workgroup_config(
 		}
 	}
 
+	/*
+ 		in-place copying 'WorkgroupConfig(wc)'
+	*/
 	if ( workgroup_tag == 0 && worker_rank == 0 ){
 		workgroup_config[0] = wc;
 		//MPI_ISend(&wc,sizeof(WorkgroupConfig),MPI_CHAR,base_root,workgroup_tag,*base_comm);
 	}
 	
-
 	MPI_Bcast(&workgroup_config[0],sizeof(WorkgroupConfig)*n_workgroup,MPI_CHAR,base_root,*base_comm);
 /*
 	for(int i=0;i<n_workgroup;i++){

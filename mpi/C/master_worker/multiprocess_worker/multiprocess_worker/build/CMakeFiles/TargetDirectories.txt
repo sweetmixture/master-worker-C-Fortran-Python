@@ -1,3 +1,0 @@
-/home/uccawkj/multiprocessing/mpi/C/master_worker/multiprocess_worker/build/CMakeFiles/rebuild_cache.dir
-/home/uccawkj/multiprocessing/mpi/C/master_worker/multiprocess_worker/build/CMakeFiles/edit_cache.dir
-/home/uccawkj/multiprocessing/mpi/C/master_worker/multiprocess_worker/build/CMakeFiles/tf.x.dir

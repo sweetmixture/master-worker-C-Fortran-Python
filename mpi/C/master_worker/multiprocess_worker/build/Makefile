@@ -57,10 +57,10 @@ RM = /lustre/shared/ucl/apps/cmake/3.21.1/gnu-4.9.2/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/uccawkj/Software/multiprocessing/mpi/C/master_worker/multiprocess_worker
+CMAKE_SOURCE_DIR = /home/uccawkj/Software/master-worker-C-Fortran-Python/mpi/C/master_worker/multiprocess_worker
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/uccawkj/Software/multiprocessing/mpi/C/master_worker/multiprocess_worker/build
+CMAKE_BINARY_DIR = /home/uccawkj/Software/master-worker-C-Fortran-Python/mpi/C/master_worker/multiprocess_worker/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/uccawkj/Software/multiprocessing/mpi/C/master_worker/multiprocess_worker/build/CMakeFiles /home/uccawkj/Software/multiprocessing/mpi/C/master_worker/multiprocess_worker/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/uccawkj/Software/master-worker-C-Fortran-Python/mpi/C/master_worker/multiprocess_worker/build/CMakeFiles /home/uccawkj/Software/master-worker-C-Fortran-Python/mpi/C/master_worker/multiprocess_worker/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/uccawkj/Software/multiprocessing/mpi/C/master_worker/multiprocess_worker/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/uccawkj/Software/master-worker-C-Fortran-Python/mpi/C/master_worker/multiprocess_worker/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -177,6 +177,30 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tf.x.dir/build.make CMakeFiles/tf.x.dir/main.c.s
 .PHONY : main.c.s
 
+master_worker_task.o: master_worker_task.c.o
+.PHONY : master_worker_task.o
+
+# target to build an object file
+master_worker_task.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tf.x.dir/build.make CMakeFiles/tf.x.dir/master_worker_task.c.o
+.PHONY : master_worker_task.c.o
+
+master_worker_task.i: master_worker_task.c.i
+.PHONY : master_worker_task.i
+
+# target to preprocess a source file
+master_worker_task.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tf.x.dir/build.make CMakeFiles/tf.x.dir/master_worker_task.c.i
+.PHONY : master_worker_task.c.i
+
+master_worker_task.s: master_worker_task.c.s
+.PHONY : master_worker_task.s
+
+# target to generate assembly for a file
+master_worker_task.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tf.x.dir/build.make CMakeFiles/tf.x.dir/master_worker_task.c.s
+.PHONY : master_worker_task.c.s
+
 subprogram/subprogram_pi.o: subprogram/subprogram_pi.c.o
 .PHONY : subprogram/subprogram_pi.o
 
@@ -240,6 +264,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... master_worker_task.o"
+	@echo "... master_worker_task.i"
+	@echo "... master_worker_task.s"
 	@echo "... subprogram/subprogram_pi.o"
 	@echo "... subprogram/subprogram_pi.i"
 	@echo "... subprogram/subprogram_pi.s"
