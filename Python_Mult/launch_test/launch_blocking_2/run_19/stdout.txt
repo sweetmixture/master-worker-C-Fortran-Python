@@ -1,0 +1,3 @@
+pid: 24198 ntasks: 10 rank: 0 start: 2023-05-23 12:10:44.994926 
+pid: 24198 ntasks: 10 rank: 0 end: 2023-05-23 12:10:44.2023-05-23 12:10:49.401921 
+Approximate value of pi: 3.1415938950 / Elapsed time: 4.407 seconds

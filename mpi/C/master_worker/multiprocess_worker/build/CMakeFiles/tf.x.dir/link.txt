@@ -1,0 +1,1 @@
+icc  -std=c11 -O3 CMakeFiles/tf.x.dir/main.c.o CMakeFiles/tf.x.dir/taskfarm_def.c.o CMakeFiles/tf.x.dir/develop/unit_test.c.o CMakeFiles/tf.x.dir/subprogram/subprogram_pi.c.o -o tf.x  /shared/ucl/apps/intel/2018.Update3/impi/2018.3.222/lib64/libmpi.so /shared/ucl/apps/intel/2018.Update3/impi/2018.3.222/lib64/libmpigi.a /lib64/libdl.so /lib64/librt.so -lpthread 

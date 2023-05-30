@@ -1,0 +1,4 @@
+avail resource    : 40
+# workgroups      : 10
+# cpus per groups : 4
+application path  : /home/uccawkj/Software/Python_Mult/test_programs_bin/pi.x

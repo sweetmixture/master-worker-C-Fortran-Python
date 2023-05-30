@@ -1,0 +1,62 @@
+run_10/stdout.txt:Approximate value of pi: 3.141474 / Elapsed time: 2.359 seconds
+run_11/stdout.txt:Approximate value of pi: 3.141474 / Elapsed time: 2.304 seconds
+run_12/stdout.txt:Approximate value of pi: 3.141474 / Elapsed time: 2.295 seconds
+run_13/stdout.txt:Approximate value of pi: 3.141474 / Elapsed time: 2.297 seconds
+run_14/stdout.txt:Approximate value of pi: 3.141474 / Elapsed time: 2.292 seconds
+run_15/stdout.txt:Approximate value of pi: 3.141474 / Elapsed time: 2.293 seconds
+run_16/stdout.txt:Approximate value of pi: 3.141474 / Elapsed time: 2.360 seconds
+run_17/stdout.txt:Approximate value of pi: 3.141474 / Elapsed time: 2.145 seconds
+run_18/stdout.txt:Approximate value of pi: 3.141474 / Elapsed time: 2.274 seconds
+run_19/stdout.txt:Approximate value of pi: 3.141474 / Elapsed time: 2.276 seconds
+run_1/stdout.txt:Approximate value of pi: 3.141474 / Elapsed time: 2.407 seconds
+run_20/stdout.txt:Approximate value of pi: 3.141474 / Elapsed time: 2.267 seconds
+run_2/stdout.txt:Approximate value of pi: 3.141474 / Elapsed time: 2.307 seconds
+run_3/stdout.txt:Approximate value of pi: 3.141474 / Elapsed time: 2.299 seconds
+run_4/stdout.txt:Approximate value of pi: 3.141474 / Elapsed time: 2.387 seconds
+run_5/stdout.txt:Approximate value of pi: 3.141474 / Elapsed time: 2.301 seconds
+run_6/stdout.txt:Approximate value of pi: 3.141474 / Elapsed time: 2.348 seconds
+run_7/stdout.txt:Approximate value of pi: 3.141474 / Elapsed time: 2.251 seconds
+run_8/stdout.txt:Approximate value of pi: 3.141474 / Elapsed time: 2.218 seconds
+run_9/stdout.txt:Approximate value of pi: 3.141474 / Elapsed time: 2.220 seconds
+
+run_10/stdout.txt:pid: 6108 ntasks: 4 rank: 0 end: 2023-05-22 16:57:19.2023-05-22 16:57:21.735079 
+run_11/stdout.txt:pid: 6080 ntasks: 4 rank: 0 end: 2023-05-22 16:57:21.2023-05-22 16:57:24.335963 
+run_12/stdout.txt:pid: 6088 ntasks: 4 rank: 0 end: 2023-05-22 16:57:21.2023-05-22 16:57:24.335175 
+run_13/stdout.txt:pid: 6096 ntasks: 4 rank: 0 end: 2023-05-22 16:57:21.2023-05-22 16:57:24.226752 
+run_14/stdout.txt:pid: 6102 ntasks: 4 rank: 0 end: 2023-05-22 16:57:21.2023-05-22 16:57:24.226751 
+run_15/stdout.txt:pid: 6109 ntasks: 4 rank: 0 end: 2023-05-22 16:57:21.2023-05-22 16:57:24.234859 
+run_16/stdout.txt:pid: 6082 ntasks: 4 rank: 0 end: 2023-05-22 16:57:24.2023-05-22 16:57:26.822683 
+run_17/stdout.txt:pid: 6089 ntasks: 4 rank: 0 end: 2023-05-22 16:57:24.2023-05-22 16:57:26.719297 
+run_18/stdout.txt:pid: 6094 ntasks: 4 rank: 0 end: 2023-05-22 16:57:24.2023-05-22 16:57:26.834168 
+run_19/stdout.txt:pid: 6103 ntasks: 4 rank: 0 end: 2023-05-22 16:57:24.2023-05-22 16:57:26.831150 
+run_1/stdout.txt:pid: 6079 ntasks: 4 rank: 0 end: 2023-05-22 16:57:16.2023-05-22 16:57:19.226614 
+run_20/stdout.txt:pid: 6110 ntasks: 4 rank: 0 end: 2023-05-22 16:57:24.2023-05-22 16:57:26.824971 
+run_2/stdout.txt:pid: 6086 ntasks: 4 rank: 0 end: 2023-05-22 16:57:16.2023-05-22 16:57:19.227046 
+run_3/stdout.txt:pid: 6093 ntasks: 4 rank: 0 end: 2023-05-22 16:57:16.2023-05-22 16:57:19.333628 
+run_4/stdout.txt:pid: 6100 ntasks: 4 rank: 0 end: 2023-05-22 16:57:17.2023-05-22 16:57:19.343833 
+run_5/stdout.txt:pid: 6107 ntasks: 4 rank: 0 end: 2023-05-22 16:57:17.2023-05-22 16:57:19.335442 
+run_6/stdout.txt:pid: 6081 ntasks: 4 rank: 0 end: 2023-05-22 16:57:19.2023-05-22 16:57:21.725302 
+run_7/stdout.txt:pid: 6087 ntasks: 4 rank: 0 end: 2023-05-22 16:57:19.2023-05-22 16:57:21.832553 
+run_8/stdout.txt:pid: 6095 ntasks: 4 rank: 0 end: 2023-05-22 16:57:19.2023-05-22 16:57:21.836596 
+run_9/stdout.txt:pid: 6101 ntasks: 4 rank: 0 end: 2023-05-22 16:57:19.2023-05-22 16:57:21.735116 
+
+ 6997 uccawkj   20   0   73228  11252   6264 R   5.8  0.0   0:00.18 pi.x                                                                                                                                                              
+ 6999 uccawkj   20   0   73228  11436   6464 R   5.8  0.0   0:00.18 pi.x                                                                                                                                                              
+ 6991 uccawkj   20   0   73228  11448   6464 R   5.5  0.0   0:00.17 pi.x                                                                                                                                                              
+ 6992 uccawkj   20   0   73228  11156   6168 R   5.5  0.0   0:00.17 pi.x                                                                                                                                                              
+ 6994 uccawkj   20   0   73228  11076   6104 R   5.5  0.0   0:00.17 pi.x                                                                                                                                                              
+ 6998 uccawkj   20   0   73228  11140   6164 R   5.5  0.0   0:00.17 pi.x                                                                                                                                                              
+ 7001 uccawkj   20   0   73228  11468   6480 R   5.5  0.0   0:00.17 pi.x                                                                                                                                                              
+ 7004 uccawkj   20   0   73228  11356   6384 R   5.5  0.0   0:00.17 pi.x                                                                                                                                                              
+ 6990 uccawkj   20   0   73228  11332   6340 R   5.2  0.0   0:00.16 pi.x                                                                                                                                                              
+ 6996 uccawkj   20   0   73228  11404   6432 R   5.2  0.0   0:00.16 pi.x                                                                                                                                                              
+ 7002 uccawkj   20   0   73228  11016   6024 R   5.2  0.0   0:00.16 pi.x                                                                                                                                                              
+ 7003 uccawkj   20   0   73228  11316   6332 R   4.9  0.0   0:00.15 pi.x                                                                                                                                                              
+ 7007 uccawkj   20   0   73228  11060   6092 R   4.9  0.0   0:00.15 pi.x                                                                                                                                                              
+ 7009 uccawkj   20   0   73228  11448   6472 R   4.9  0.0   0:00.15 pi.x                                                                                                                                                              
+ 7010 uccawkj   20   0   73228  10980   6008 R   4.9  0.0   0:00.15 pi.x                                                                                                                                                              
+ 7011 uccawkj   20   0   73228  11064   6092 R   4.9  0.0   0:00.15 pi.x                                                                                                                                                              
+ 7012 uccawkj   20   0   73228  11312   6324 R   4.9  0.0   0:00.15 pi.x                                                                                                                                                              
+ 7005 uccawkj   20   0   73228  11256   6268 R   4.5  0.0   0:00.14 pi.x                                                                                                                                                              
+ 7006 uccawkj   20   0   73228  11236   6260 R   4.5  0.0   0:00.14 pi.x                                                                                                                                                              
+ 7008 uccawkj   20   0   73228  11212   6244 R   4.5  0.0   0:00.14 pi.x 

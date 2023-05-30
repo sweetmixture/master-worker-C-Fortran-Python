@@ -1,0 +1,52 @@
+run_1/stdout.txt:pid: 24150 ntasks: 10 rank: 0 end: 2023-05-23 12:10:26.2023-05-23 12:10:30.738247 	# task 1 - group 1 done 1st
+run_2/stdout.txt:pid: 24164 ntasks: 10 rank: 0 end: 2023-05-23 12:10:26.2023-05-23 12:10:30.833377 	# task 2 - group 2 done 2nd
+run_3/stdout.txt:pid: 24178 ntasks: 10 rank: 0 end: 2023-05-23 12:10:26.2023-05-23 12:10:31.166676  	# task 3 - group 3 done at '31.166..' 4th
+run_4/stdout.txt:pid: 24193 ntasks: 10 rank: 0 end: 2023-05-23 12:10:26.2023-05-23 12:10:30.861438 	# task 4 - group 4 done at '30.861..' 3rd
+run_5/stdout.txt:pid: 24194 ntasks: 10 rank: 0 end: 2023-05-23 12:10:30.2023-05-23 12:10:34.816967 
+run_6/stdout.txt:pid: 24195 ntasks: 10 rank: 0 end: 2023-05-23 12:10:31.2023-05-23 12:10:34.920645 
+run_7/stdout.txt:pid: 24197 ntasks: 10 rank: 0 end: 2023-05-23 12:10:31.2023-05-23 12:10:35.789759 
+run_8/stdout.txt:pid: 24196 ntasks: 10 rank: 0 end: 2023-05-23 12:10:31.2023-05-23 12:10:35.381459 
+run_9/stdout.txt:pid: 24198 ntasks: 10 rank: 0 end: 2023-05-23 12:10:34.2023-05-23 12:10:38.942582 
+run_10/stdout.txt:pid: 24199 ntasks: 10 rank: 0 end: 2023-05-23 12:10:35.2023-05-23 12:10:39.120321 
+run_11/stdout.txt:pid: 24200 ntasks: 10 rank: 0 end: 2023-05-23 12:10:35.2023-05-23 12:10:40.113526 
+run_12/stdout.txt:pid: 24201 ntasks: 10 rank: 0 end: 2023-05-23 12:10:35.2023-05-23 12:10:39.864918 
+run_13/stdout.txt:pid: 24202 ntasks: 10 rank: 0 end: 2023-05-23 12:10:39.2023-05-23 12:10:43.705790 
+run_14/stdout.txt:pid: 24193 ntasks: 10 rank: 0 end: 2023-05-23 12:10:39.2023-05-23 12:10:43.871614 
+run_15/stdout.txt:pid: 24194 ntasks: 10 rank: 0 end: 2023-05-23 12:10:40.2023-05-23 12:10:44.815017 
+run_16/stdout.txt:pid: 24195 ntasks: 10 rank: 0 end: 2023-05-23 12:10:40.2023-05-23 12:10:44.613314 
+run_17/stdout.txt:pid: 24196 ntasks: 10 rank: 0 end: 2023-05-23 12:10:43.2023-05-23 12:10:48.369744 
+run_18/stdout.txt:pid: 24197 ntasks: 10 rank: 0 end: 2023-05-23 12:10:44.2023-05-23 12:10:48.592458 
+run_19/stdout.txt:pid: 24198 ntasks: 10 rank: 0 end: 2023-05-23 12:10:44.2023-05-23 12:10:49.401921 
+run_20/stdout.txt:pid: 24199 ntasks: 10 rank: 0 end: 2023-05-23 12:10:45.2023-05-23 12:10:49.491845 
+(base) [uccawkj@login02 launch_blocking_2]$ 
+(base) [uccawkj@login02 launch_blocking_2]$ !cat
+cat log.txt 
+avail resource    : 40
+# workgroups      : 4
+# cpus per groups : 10
+application path  : /home/uccawkj/Software/Python_Mult/test_programs_bin/pi.x
+job status: 0 start: 2023-05-23 12:10:26.653999 end: 2023-05-23 12:10:30.746138 delta: 0:00:04.092139	# task 1 - g1
+job status: 0 start: 2023-05-23 12:10:26.654034 end: 2023-05-23 12:10:30.841122 delta: 0:00:04.187088   # task 2 - g2
+job status: 0 start: 2023-05-23 12:10:26.654042 end: 2023-05-23 12:10:31.179222 delta: 0:00:04.525180	# task 3 - g3
+job status: 0 start: 2023-05-23 12:10:26.654048 end: 2023-05-23 12:10:31.179305 delta: 0:00:04.525257	# task 4 - g4
+
+job status: 0 start: 2023-05-23 12:10:30.746223 end: 2023-05-23 12:10:34.823760 delta: 0:00:04.077537	# task 4 - g1 (as soon as task 1 done)
+job status: 0 start: 2023-05-23 12:10:30.841194 end: 2023-05-23 12:10:34.927897 delta: 0:00:04.086703	# task 5 - g2 (as sonn as task 2 done)
+job status: 0 start: 2023-05-23 12:10:31.179296 end: 2023-05-23 12:10:35.798865 delta: 0:00:04.619569	# task 6 - g3 (as soon as task 3 done - most late)
+job status: 0 start: 2023-05-23 12:10:31.179318 end: 2023-05-23 12:10:35.798980 delta: 0:00:04.619662	# task 7 - g4 (delayed while waiting g3 'get()' its done message ..) -> get() blokcing causing issue!!!
+														# this can be checked by 'start' time of task 6 and 7 which are same ... even task 3 by g3 done earlier
+															# which should have lauched task 6 earlier
+job status: 0 start: 2023-05-23 12:10:34.823831 end: 2023-05-23 12:10:38.949465 delta: 0:00:04.125634
+job status: 0 start: 2023-05-23 12:10:34.928013 end: 2023-05-23 12:10:39.127762 delta: 0:00:04.199749
+job status: 0 start: 2023-05-23 12:10:35.798964 end: 2023-05-23 12:10:40.121639 delta: 0:00:04.322675
+job status: 0 start: 2023-05-23 12:10:35.799016 end: 2023-05-23 12:10:40.121737 delta: 0:00:04.322721
+
+job status: 0 start: 2023-05-23 12:10:38.949536 end: 2023-05-23 12:10:43.714428 delta: 0:00:04.764892
+job status: 0 start: 2023-05-23 12:10:39.127831 end: 2023-05-23 12:10:43.889378 delta: 0:00:04.761547
+job status: 0 start: 2023-05-23 12:10:40.121719 end: 2023-05-23 12:10:44.825114 delta: 0:00:04.703395
+job status: 0 start: 2023-05-23 12:10:40.121751 end: 2023-05-23 12:10:44.825183 delta: 0:00:04.703432
+
+job status: 0 start: 2023-05-23 12:10:43.714512 end: 2023-05-23 12:10:48.376736 delta: 0:00:04.662224
+job status: 0 start: 2023-05-23 12:10:43.889460 end: 2023-05-23 12:10:48.599615 delta: 0:00:04.710155
+job status: 0 start: 2023-05-23 12:10:44.825174 end: 2023-05-23 12:10:49.413606 delta: 0:00:04.588432
+job status: 0 start: 2023-05-23 12:10:44.825196 end: 2023-05-23 12:10:49.501591 delta: 0:00:04.676395

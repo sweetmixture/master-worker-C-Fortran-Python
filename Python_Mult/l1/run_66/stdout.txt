@@ -1,0 +1,3 @@
+ntasks: 4 rank: 0 start: 2023-05-22 14:08:52.716864 
+ntasks: 4 rank: 0 end: 2023-05-22 14:08:52.2023-05-22 14:09:24.392769 
+Approximate value of pi: 3.141557 / Elapsed time: 31.676 seconds

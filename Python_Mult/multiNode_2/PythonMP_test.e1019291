@@ -1,0 +1,40 @@
+/home/uccawkj/.bashrc: line 9: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+/home/uccawkj/.bashrc: line 9: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+Loading python3/3.8
+  Loading requirement: python/3.8.6 openblas/0.3.7-serial/gnu-4.9.2
+node-c12f-012.61987PSM2 can't open hfi unit: -1 (err=23)
+[3] MPI startup(): tmi fabric is not available and fallback fabric is not enabled
+node-c12f-012.62026PSM2 can't open hfi unit: -1 (err=23)
+node-c12f-012.62025PSM2 can't open hfi unit: -1 (err=23)
+[1] MPI startup(): tmi fabric is not available and fallback fabric is not enabled
+[2] MPI startup(): tmi fabric is not available and fallback fabric is not enabled
+node-c12f-012.62067PSM2 can't open hfi unit: -1 (err=23)
+[3] MPI startup(): tmi fabric is not available and fallback fabric is not enabled
+node-c12f-012.62070PSM2 can't open hfi unit: -1 (err=23)
+[2] MPI startup(): tmi fabric is not available and fallback fabric is not enabled
+node-c12f-012.62073PSM2 can't open hfi unit: -1 (err=23)
+[1] MPI startup(): tmi fabric is not available and fallback fabric is not enabled
+node-c12f-012.62095PSM2 can't open hfi unit: -1 (err=23)
+[0] MPI startup(): tmi fabric is not available and fallback fabric is not enabled
+node-c12f-012.62097PSM2 can't open hfi unit: -1 (err=23)
+[2] MPI startup(): tmi fabric is not available and fallback fabric is not enabled
+node-c12f-012.62114PSM2 can't open hfi unit: -1 (err=23)
+[1] MPI startup(): tmi fabric is not available and fallback fabric is not enabled
+node-c12f-012.62116PSM2 can't open hfi unit: -1 (err=23)
+[3] MPI startup(): tmi fabric is not available and fallback fabric is not enabled
+node-c12f-012.62132PSM2 can't open hfi unit: -1 (err=23)
+[3] MPI startup(): tmi fabric is not available and fallback fabric is not enabled
+node-c12f-012.62130PSM2 can't open hfi unit: -1 (err=23)
+[1] MPI startup(): tmi fabric is not available and fallback fabric is not enabled
+node-c12f-012.62125PSM2 can't open hfi unit: -1 (err=23)
+[1] MPI startup(): tmi fabric is not available and fallback fabric is not enabled
+node-c12f-012.62127PSM2 can't open hfi unit: -1 (err=23)
+[3] MPI startup(): tmi fabric is not available and fallback fabric is not enabled
+node-c12f-012.62124node-c12f-012.62137PSM2 can't open hfi unit: -1 (err=23)
+[0] MPI startup(): tmi fabric is not available and fallback fabric is not enabled
+node-c12f-012.62138PSM2 can't open hfi unit: -1 (err=23)
+[1] MPI startup(): tmi fabric is not available and fallback fabric is not enabled
+node-c12f-012.62139PSM2 can't open hfi unit: -1 (err=23)
+[2] MPI startup(): tmi fabric is not available and fallback fabric is not enabled
+node-c12f-012.62140PSM2 can't open hfi unit: -1 (err=23)
+[3] MPI startup(): tmi fabric is not available and fallback fabric is not enabled

@@ -1,0 +1,10 @@
+run_10/stdout.txt:Approximate value of pi: 3.141474 / Elapsed time: 2.214 seconds
+run_1/stdout.txt:Approximate value of pi: 3.141474 / Elapsed time: 2.385 seconds
+run_2/stdout.txt:Approximate value of pi: 3.141474 / Elapsed time: 2.384 seconds
+run_3/stdout.txt:Approximate value of pi: 3.141474 / Elapsed time: 2.392 seconds
+run_4/stdout.txt:Approximate value of pi: 3.141474 / Elapsed time: 2.303 seconds
+run_5/stdout.txt:Approximate value of pi: 3.141474 / Elapsed time: 2.307 seconds
+run_6/stdout.txt:Approximate value of pi: 3.141474 / Elapsed time: 2.297 seconds
+run_7/stdout.txt:Approximate value of pi: 3.141474 / Elapsed time: 2.229 seconds
+run_8/stdout.txt:Approximate value of pi: 3.141474 / Elapsed time: 2.300 seconds
+run_9/stdout.txt:Approximate value of pi: 3.141474 / Elapsed time: 2.303 seconds

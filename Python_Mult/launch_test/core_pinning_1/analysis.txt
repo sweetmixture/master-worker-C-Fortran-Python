@@ -1,0 +1,45 @@
+run_1/stdout.txt:pid: 4611 ntasks: 10 rank: 0 start/end: 2023-05-23 17:27:15.2023-05-23 17:27:18.769895/2023-05-23 17:27:18.769895 elapsedd_t: 3.695 
+run_2/stdout.txt:pid: 4636 ntasks: 10 rank: 0 start/end: 2023-05-23 17:27:15.2023-05-23 17:27:18.766984/2023-05-23 17:27:18.766984 elapsedd_t: 3.690 
+run_3/stdout.txt:pid: 4639 ntasks: 10 rank: 0 start/end: 2023-05-23 17:27:18.2023-05-23 17:27:22.516813/2023-05-23 17:27:22.516813 elapsedd_t: 3.619 
+run_4/stdout.txt:pid: 4638 ntasks: 10 rank: 0 start/end: 2023-05-23 17:27:18.2023-05-23 17:27:22.582354/2023-05-23 17:27:22.582354 elapsedd_t: 3.633 
+run_5/stdout.txt:pid: 4640 ntasks: 10 rank: 0 start/end: 2023-05-23 17:27:22.2023-05-23 17:27:26.269892/2023-05-23 17:27:26.269892 elapsedd_t: 3.621 
+run_6/stdout.txt:pid: 4641 ntasks: 10 rank: 0 start/end: 2023-05-23 17:27:22.2023-05-23 17:27:26.425413/2023-05-23 17:27:26.425413 elapsedd_t: 3.672 
+run_7/stdout.txt:pid: 4642 ntasks: 10 rank: 0 start/end: 2023-05-23 17:27:26.2023-05-23 17:27:30.083203/2023-05-23 17:27:30.083203 elapsedd_t: 3.648 
+run_8/stdout.txt:pid: 4643 ntasks: 10 rank: 0 start/end: 2023-05-23 17:27:26.2023-05-23 17:27:30.096301/2023-05-23 17:27:30.096301 elapsedd_t: 3.513 
+run_9/stdout.txt:pid: 4644 ntasks: 10 rank: 0 start/end: 2023-05-23 17:27:30.2023-05-23 17:27:33.732280/2023-05-23 17:27:33.732280 elapsedd_t: 3.515 
+run_10/stdout.txt:pid: 4645 ntasks: 10 rank: 0 start/end: 2023-05-23 17:27:30.2023-05-23 17:27:33.740193/2023-05-23 17:27:33.740193 elapsedd_t: 3.510 
+run_11/stdout.txt:pid: 4646 ntasks: 10 rank: 0 start/end: 2023-05-23 17:27:33.2023-05-23 17:27:37.455827/2023-05-23 17:27:37.455827 elapsedd_t: 3.575 
+run_12/stdout.txt:pid: 4636 ntasks: 10 rank: 0 start/end: 2023-05-23 17:27:33.2023-05-23 17:27:37.404975/2023-05-23 17:27:37.404975 elapsedd_t: 3.532 
+run_13/stdout.txt:pid: 4639 ntasks: 10 rank: 0 start/end: 2023-05-23 17:27:37.2023-05-23 17:27:41.195859/2023-05-23 17:27:41.195859 elapsedd_t: 3.662 
+run_14/stdout.txt:pid: 4638 ntasks: 10 rank: 0 start/end: 2023-05-23 17:27:37.2023-05-23 17:27:41.395160/2023-05-23 17:27:41.395160 elapsedd_t: 3.797 
+run_15/stdout.txt:pid: 4640 ntasks: 10 rank: 0 start/end: 2023-05-23 17:27:41.2023-05-23 17:27:45.016413/2023-05-23 17:27:45.016413 elapsedd_t: 3.675 
+run_16/stdout.txt:pid: 4641 ntasks: 10 rank: 0 start/end: 2023-05-23 17:27:41.2023-05-23 17:27:45.186374/2023-05-23 17:27:45.186374 elapsedd_t: 3.634 
+run_17/stdout.txt:pid: 4642 ntasks: 10 rank: 0 start/end: 2023-05-23 17:27:45.2023-05-23 17:27:48.789376/2023-05-23 17:27:48.789376 elapsedd_t: 3.612 
+run_18/stdout.txt:pid: 4643 ntasks: 10 rank: 0 start/end: 2023-05-23 17:27:45.2023-05-23 17:27:48.896180/2023-05-23 17:27:48.896180 elapsedd_t: 3.544 
+run_19/stdout.txt:pid: 4644 ntasks: 10 rank: 0 start/end: 2023-05-23 17:27:48.2023-05-23 17:27:52.546458/2023-05-23 17:27:52.546458 elapsedd_t: 3.608 
+run_20/stdout.txt:pid: 4645 ntasks: 10 rank: 0 start/end: 2023-05-23 17:27:49.2023-05-23 17:27:52.579872/2023-05-23 17:27:52.579872 elapsedd_t: 3.498
+
+avail resource    : 20.0
+# workgroups      : 2
+# cpus per groups : 10
+application path  : /home/uccawkj/Software/Python_Mult/test_programs_bin/pi.x
+workgroup: 0 job_id: 0 -> job status: 0 || start: 2023-05-23 17:27:14.751583 end: 2023-05-23 17:27:18.786162 delta: 0:00:04.034579
+workgroup: 1 job_id: 1 -> job status: 0 || start: 2023-05-23 17:27:14.751609 end: 2023-05-23 17:27:18.786507 delta: 0:00:04.034898
+workgroup: 0 job_id: 2 -> job status: 0 || start: 2023-05-23 17:27:18.786483 end: 2023-05-23 17:27:22.535843 delta: 0:00:03.749360
+workgroup: 1 job_id: 3 -> job status: 0 || start: 2023-05-23 17:27:18.786536 end: 2023-05-23 17:27:22.609911 delta: 0:00:03.823375
+workgroup: 0 job_id: 4 -> job status: 0 || start: 2023-05-23 17:27:22.535970 end: 2023-05-23 17:27:26.286014 delta: 0:00:03.750044
+workgroup: 1 job_id: 5 -> job status: 0 || start: 2023-05-23 17:27:22.609959 end: 2023-05-23 17:27:26.452240 delta: 0:00:03.842281
+workgroup: 0 job_id: 6 -> job status: 0 || start: 2023-05-23 17:27:26.286077 end: 2023-05-23 17:27:30.100301 delta: 0:00:03.814224
+workgroup: 1 job_id: 7 -> job status: 0 || start: 2023-05-23 17:27:26.452283 end: 2023-05-23 17:27:30.116042 delta: 0:00:03.663759
+workgroup: 0 job_id: 8 -> job status: 0 || start: 2023-05-23 17:27:30.100490 end: 2023-05-23 17:27:33.749051 delta: 0:00:03.648561
+workgroup: 1 job_id: 9 -> job status: 0 || start: 2023-05-23 17:27:30.116068 end: 2023-05-23 17:27:33.749127 delta: 0:00:03.633059
+workgroup: 1 job_id: 11 -> job status: 0 || start: 2023-05-23 17:27:33.749140 end: 2023-05-23 17:27:37.419018 delta: 0:00:03.669878
+workgroup: 0 job_id: 10 -> job status: 0 || start: 2023-05-23 17:27:33.749121 end: 2023-05-23 17:27:37.471082 delta: 0:00:03.721961
+workgroup: 1 job_id: 12 -> job status: 0 || start: 2023-05-23 17:27:37.419145 end: 2023-05-23 17:27:41.212622 delta: 0:00:03.793477
+workgroup: 0 job_id: 13 -> job status: 0 || start: 2023-05-23 17:27:37.471188 end: 2023-05-23 17:27:41.413128 delta: 0:00:03.941940
+workgroup: 1 job_id: 14 -> job status: 0 || start: 2023-05-23 17:27:41.212695 end: 2023-05-23 17:27:45.038804 delta: 0:00:03.826109
+workgroup: 0 job_id: 15 -> job status: 0 || start: 2023-05-23 17:27:41.413182 end: 2023-05-23 17:27:45.209382 delta: 0:00:03.796200
+workgroup: 1 job_id: 16 -> job status: 0 || start: 2023-05-23 17:27:45.038846 end: 2023-05-23 17:27:48.817688 delta: 0:00:03.778842
+workgroup: 0 job_id: 17 -> job status: 0 || start: 2023-05-23 17:27:45.209413 end: 2023-05-23 17:27:48.929021 delta: 0:00:03.719608
+workgroup: 1 job_id: 18 -> job status: 0 || start: 2023-05-23 17:27:48.817844 end: 2023-05-23 17:27:52.558101 delta: 0:00:03.740257
+workgroup: 0 job_id: 19 -> job status: 0 || start: 2023-05-23 17:27:48.929078 end: 2023-05-23 17:27:52.589064 delta: 0:00:03.659986

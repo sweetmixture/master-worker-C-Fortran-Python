@@ -1,0 +1,3 @@
+pid: 4636 ntasks: 10 rank: 0 start: 2023-05-23 17:27:33.872814 
+pid: 4636 ntasks: 10 rank: 0 start/end: 2023-05-23 17:27:33.2023-05-23 17:27:37.404975/2023-05-23 17:27:37.404975 elapsedd_t: 3.532 
+Approximate value of pi: 3.1415910100 / Elapsed time: 3.532 seconds

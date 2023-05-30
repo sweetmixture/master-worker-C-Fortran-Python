@@ -1,0 +1,3 @@
+pid: 40107 ntasks: 10 rank: 0 start: 2023-05-23 16:49:25.307709 
+pid: 40107 ntasks: 10 rank: 0 start/end: 2023-05-23 16:49:25.2023-05-23 16:49:30.236713/2023-05-23 16:49:30.236713 elapsedd_t: 4.929 
+Approximate value of pi: 3.1415195275 / Elapsed time: 4.929 seconds

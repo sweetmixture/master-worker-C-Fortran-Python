@@ -1,0 +1,3 @@
+pid: 18544 ntasks: 10 rank: 0 start: 2023-05-23 16:29:15.745820 
+pid: 18544 ntasks: 10 rank: 0 start/end: 2023-05-23 16:29:15.2023-05-23 16:29:20.728963/2023-05-23 16:29:20.728963 elapsedd_t: 4.983 
+Approximate value of pi: 3.1415790750 / Elapsed time: 4.983 seconds

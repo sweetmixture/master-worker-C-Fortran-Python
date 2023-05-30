@@ -1,0 +1,3 @@
+pid: 13663 ntasks: 4 rank: 0 start: 2023-05-22 17:53:36.520182 
+pid: 13663 ntasks: 4 rank: 0 end: 2023-05-22 17:53:36.2023-05-22 17:53:38.826972 
+Approximate value of pi: 3.141474 / Elapsed time: 2.307 seconds

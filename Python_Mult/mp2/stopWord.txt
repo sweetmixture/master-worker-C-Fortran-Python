@@ -1,0 +1,15 @@
+Hi all,
+
+Myriad's filesystem was up again from 17:30 yesterday, but we're still at risk, encountering problems and experiencing periods of unresponsiveness of several minutes while Lustre failover and recovery happens.
+
+We found that we had an initial Object Store Server reboot and failover yesterday, then hit a Lustre bug during recovery, and the OSSes were then getting stuck while attempting to save crash dumps and reboot - this is why the filesystem wasn't successfully coming back up.
+
+We have changed some configuration so that nodes should correctly recover even after hitting this bug.
+
+We're running at risk still, because the Lustre bug is still reoccurring from time to time and results in several minutes of unresponsiveness while Lustre failover and recovery happens. 
+
+We're looking at whether we can schedule a Lustre software upgrade during Myriad's planned outage on 10-15 May (https://www.rc.ucl.ac.uk/docs/Planned_Outages/), since the bug we are currently experiencing is fixed in the next minor version.
+
+We do have some longer-term filesystem changes in the works, with an additional cross-site filesystem first and a replacement of Scratch later - more information to come when we have more concrete details and timelines. This is just to inform you that improvements will be coming.
+
+Please send any queries to rc-support@ucl.ac.uk

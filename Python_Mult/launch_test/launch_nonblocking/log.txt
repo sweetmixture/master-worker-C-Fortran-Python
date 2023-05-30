@@ -1,0 +1,4 @@
+avail resource    : 20
+# workgroups      : 5
+# cpus per groups : 4
+application path  : /home/uccawkj/mpi/master-worker-mpi/Python_Mult/test_programs_bin/pi.x

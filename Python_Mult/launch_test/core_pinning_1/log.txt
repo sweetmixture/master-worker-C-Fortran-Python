@@ -1,0 +1,24 @@
+avail resource    : 20.0
+# workgroups      : 2
+# cpus per groups : 10
+application path  : /home/uccawkj/Software/Python_Mult/test_programs_bin/pi.x
+workgroup: 0 job_id: 0 -> job status: 0 || start: 2023-05-23 17:27:14.751583 end: 2023-05-23 17:27:18.786162 delta: 0:00:04.034579
+workgroup: 1 job_id: 1 -> job status: 0 || start: 2023-05-23 17:27:14.751609 end: 2023-05-23 17:27:18.786507 delta: 0:00:04.034898
+workgroup: 0 job_id: 2 -> job status: 0 || start: 2023-05-23 17:27:18.786483 end: 2023-05-23 17:27:22.535843 delta: 0:00:03.749360
+workgroup: 1 job_id: 3 -> job status: 0 || start: 2023-05-23 17:27:18.786536 end: 2023-05-23 17:27:22.609911 delta: 0:00:03.823375
+workgroup: 0 job_id: 4 -> job status: 0 || start: 2023-05-23 17:27:22.535970 end: 2023-05-23 17:27:26.286014 delta: 0:00:03.750044
+workgroup: 1 job_id: 5 -> job status: 0 || start: 2023-05-23 17:27:22.609959 end: 2023-05-23 17:27:26.452240 delta: 0:00:03.842281
+workgroup: 0 job_id: 6 -> job status: 0 || start: 2023-05-23 17:27:26.286077 end: 2023-05-23 17:27:30.100301 delta: 0:00:03.814224
+workgroup: 1 job_id: 7 -> job status: 0 || start: 2023-05-23 17:27:26.452283 end: 2023-05-23 17:27:30.116042 delta: 0:00:03.663759
+workgroup: 0 job_id: 8 -> job status: 0 || start: 2023-05-23 17:27:30.100490 end: 2023-05-23 17:27:33.749051 delta: 0:00:03.648561
+workgroup: 1 job_id: 9 -> job status: 0 || start: 2023-05-23 17:27:30.116068 end: 2023-05-23 17:27:33.749127 delta: 0:00:03.633059
+workgroup: 1 job_id: 11 -> job status: 0 || start: 2023-05-23 17:27:33.749140 end: 2023-05-23 17:27:37.419018 delta: 0:00:03.669878
+workgroup: 0 job_id: 10 -> job status: 0 || start: 2023-05-23 17:27:33.749121 end: 2023-05-23 17:27:37.471082 delta: 0:00:03.721961
+workgroup: 1 job_id: 12 -> job status: 0 || start: 2023-05-23 17:27:37.419145 end: 2023-05-23 17:27:41.212622 delta: 0:00:03.793477
+workgroup: 0 job_id: 13 -> job status: 0 || start: 2023-05-23 17:27:37.471188 end: 2023-05-23 17:27:41.413128 delta: 0:00:03.941940
+workgroup: 1 job_id: 14 -> job status: 0 || start: 2023-05-23 17:27:41.212695 end: 2023-05-23 17:27:45.038804 delta: 0:00:03.826109
+workgroup: 0 job_id: 15 -> job status: 0 || start: 2023-05-23 17:27:41.413182 end: 2023-05-23 17:27:45.209382 delta: 0:00:03.796200
+workgroup: 1 job_id: 16 -> job status: 0 || start: 2023-05-23 17:27:45.038846 end: 2023-05-23 17:27:48.817688 delta: 0:00:03.778842
+workgroup: 0 job_id: 17 -> job status: 0 || start: 2023-05-23 17:27:45.209413 end: 2023-05-23 17:27:48.929021 delta: 0:00:03.719608
+workgroup: 1 job_id: 18 -> job status: 0 || start: 2023-05-23 17:27:48.817844 end: 2023-05-23 17:27:52.558101 delta: 0:00:03.740257
+workgroup: 0 job_id: 19 -> job status: 0 || start: 2023-05-23 17:27:48.929078 end: 2023-05-23 17:27:52.589064 delta: 0:00:03.659986
