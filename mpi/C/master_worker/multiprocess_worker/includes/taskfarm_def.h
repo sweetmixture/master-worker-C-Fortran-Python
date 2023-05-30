@@ -9,8 +9,8 @@
 #ifndef __TASKFARM_DEF
 #define __TASKFARM_DEF
 
-#define TF_WORKTAG 1
-#define TF_DIETAG  2
+#define TF_WORKTAG 777
+#define TF_DIETAG  666
 #define TF_CPUS_PER_WORKER 4
 
 #include <mpi.h>

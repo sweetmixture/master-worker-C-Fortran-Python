@@ -42,6 +42,7 @@ void master_worker_task_call_master( const MPI_Comm* base_comm, const WorkgroupC
 	// messaging tasks
 	MPI_Status status;
 	MPI_Request request;
+
 	function_task* task;
 	result_package res;
 	
@@ -54,7 +55,7 @@ void master_worker_task_call_master( const MPI_Comm* base_comm, const WorkgroupC
 		MPI_Isend(task,sizeof(function_task),MPI_CHAR,wc[n].base_rank,TF_WORKTAG,*base_comm,&request);
 		MPI_Wait(&request,&status);
 
-		printf("MASTER> MPI_Isend complete: master -> %d (base-rank) with [ tag, size ] = [ %d, %d ]\n",wc[n].base_rank,wc[n].workgroup_tag,wc[n].workgroup_size);
+		printf("MASTER - Initial task send > MPI_Isend complete: master -> %d (base-rank) with [ tag, size ] = [ %d, %d ] - task_id: %d \n",wc[n].base_rank,wc[n].workgroup_tag,wc[n].workgroup_size,task->task_id);
 	}
 
 	task = get_next_task(task_array,task_count,&sent_task_count);
@@ -62,19 +63,31 @@ void master_worker_task_call_master( const MPI_Comm* base_comm, const WorkgroupC
 	while( task != NULL ){
 
 		MPI_Recv(&res,sizeof(result_package),MPI_CHAR,MPI_ANY_SOURCE,MPI_ANY_TAG,*base_comm,&status);
-		printf("MASTER> MPI_Recv complete: from %d\n",status.MPI_SOURCE);
-
+		printf("MASTER> MPI_Recv complete: from %d - task_id: %d \n",status.MPI_SOURCE,res.task_id);
 
 		// logging 'res'
 
-		MPI_Send(task,sizeof(function_task),MPI_CHAR,status.MPI_SOURCE,TF_WORKTAG,*base_comm);	// using ... MPI handle ... MPI_Status stauts -> MPI_SOURCE
-		printf("MASTER> MPI_Send complete: master -> %d (base-rank)\n",status.MPI_SOURCE);
+		MPI_Send(task,sizeof(function_task),MPI_CHAR,status.MPI_SOURCE,TF_WORKTAG,*base_comm);	// using ... MPI handle ... MPI_Status stauts -> MPI_SOURCE (send back to right previous 'recv' source)
+		printf("MASTER> MPI_Send complete: master -> %d (base-rank) - task_id: %d\n",status.MPI_SOURCE,task->task_id);
+
 		task = get_next_task(task_array,task_count,&sent_task_count);
+	}
+
+	// Final Recv
+	for(int n=0;n<master_tag;n++){
+
+		MPI_Recv(&res,sizeof(result_package),MPI_CHAR,MPI_ANY_SOURCE,MPI_ANY_TAG,*base_comm,&status);
+		printf("MASTER> MPI_Recv complete: from %d - task_id: %d \n",status.MPI_SOURCE,res.task_id);
 	}
 
 	// Termination message
 	for(int n=0;n<master_tag;n++){
-			MPI_Send(0,0,MPI_CHAR,wc[n].base_rank,TF_DIETAG,*base_comm);
+
+			function_task end_task;
+			end_task.task_status = TASK_DIETAG;
+
+			MPI_Send(&end_task,sizeof(function_task),MPI_CHAR,wc[n].base_rank,TF_DIETAG,*base_comm);
+			//MPI_Send(0,0,MPI_CHAR,wc[n].base_rank,TF_DIETAG,*base_comm);
 			printf("MASTER - DIETAG > MPI_Send complete: master -> %d (base-rank)\n",wc[n].base_rank);
 	}
 
@@ -113,19 +126,26 @@ void master_worker_task_call_workgroup( const MPI_Comm* base_comm, const MPI_Com
 
 			// task recv - head process of each workgroup
 			if( n == workgroup_tag && worker_rank == 0 ){
-				MPI_Irecv(&task,sizeof(function_task),MPI_CHAR,master_base_rank,TF_WORKTAG,*base_comm,&request);
-				MPI_Wait(&request,&status);
-				//printf("WORKGROUP [%d] > MPI_Irecv complete : task %x %d %d\n",workgroup_tag,task.fp,task.task_id,task.task_status);
+				MPI_Recv(&task,sizeof(function_task),MPI_CHAR,master_base_rank,MPI_ANY_TAG,*base_comm,&status);
+
+				if( status.MPI_TAG == TF_WORKTAG ){
+					printf("WORKGROUP [%d] > MPI_Recv complete : task %x %d %d\n",workgroup_tag,task.fp,task.task_id,task.task_status);
+				}
+				else if( status.MPI_TAG == TF_DIETAG ){
+					printf("WORKGROUP [%d] > MPI_Recv DIETAG complete\n",workgroup_tag);
+				}
 			}
-			
+
 			// workgroup interanl bcast - task
 			if( n == workgroup_tag ){
-			
+
 				MPI_Bcast(&task,sizeof(function_task),MPI_CHAR,0,*workgroup_comm);
 				//printf("WORKGROUP [%d] > MPI_Bcast complete : worker_rank [%d] task %x %d %d\n",workgroup_tag,worker_rank,task.fp,task.task_id,task.task_status);
-		
-				if( status.MPI_TAG == TF_DIETAG ){ return; }
-		
+				
+				if( task.task_status == TASK_DIETAG ){
+					return;
+				}
+
 				//execution
 				task.task_status = TASK_EXECUTED;
 				task.fp(workgroup_comm,task.task_id);
@@ -133,6 +153,7 @@ void master_worker_task_call_workgroup( const MPI_Comm* base_comm, const MPI_Com
 
 				// setup result;
 				res.task_status = TASK_FINISHED;
+				res.task_id = task.task_id;
 
 				if( worker_rank == 0 ){
 					MPI_Send(&res,sizeof(result_package),MPI_CHAR,master_base_rank,res.task_status,*base_comm);

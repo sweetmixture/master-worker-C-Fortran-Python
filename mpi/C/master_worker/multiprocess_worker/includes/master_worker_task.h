@@ -7,6 +7,8 @@
 #define TASK_EXECUTED 56
 #define TASK_FINISHED 57
 
+#define TASK_DIETAG  666
+
 typedef void (*taskfunction_ptr)( const MPI_Comm* , int );
 
 typedef struct function_task_{
@@ -20,8 +22,11 @@ typedef struct function_task_{
 typedef struct result_package_{
 
 	int task_status;
+	int task_id;
+
 	char start_t[40];
 	char end_t[40];
+
 	double elapsed_t;
 	double value;
 
