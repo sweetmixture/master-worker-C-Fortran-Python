@@ -1,0 +1,63 @@
+Loading python3/3.8
+  Loading requirement: python/3.8.6 openblas/0.3.7-serial/gnu-4.9.2
+GERun: 
+GERun: Note: Lines like this one prefixed with "GERun:" are for debugging
+GERun:       purposes only and you do not need to report them to rc-support
+GERun:       unless your job fails for other reasons.
+GERun: 
+GERun: 
+GERun: Grid Engine parallel launcher abstraction layer version iv (public)
+GERun: Dr Owain Kenway, RCAS, RITS, ISD, UCL, 7th of February, 2018
+GERun: 
+GERun: For licensing terms, see LICENSE.txt
+GERun: 
+GERun: Using environment: intel
+GERun: Running on 40 slots:
+GERun:    40 MPI tasks
+GERun:     1 threads per task
+GERun: TMPDIR=/tmpdir/job/1048772.undefined
+GERun: 
+GERun: Contents of machinefile:
+GERun: node-c12l-002
+GERun: node-c12l-002
+GERun: node-c12l-002
+GERun: node-c12l-002
+GERun: node-c12l-002
+GERun: node-c12l-002
+GERun: node-c12l-002
+GERun: node-c12l-002
+GERun: node-c12l-002
+GERun: node-c12l-002
+GERun: node-c12l-002
+GERun: node-c12l-002
+GERun: node-c12l-002
+GERun: node-c12l-002
+GERun: node-c12l-002
+GERun: node-c12l-002
+GERun: node-c12l-002
+GERun: node-c12l-002
+GERun: node-c12l-002
+GERun: node-c12l-002
+GERun: node-c12l-002
+GERun: node-c12l-002
+GERun: node-c12l-002
+GERun: node-c12l-002
+GERun: node-c12l-002
+GERun: node-c12l-002
+GERun: node-c12l-002
+GERun: node-c12l-002
+GERun: node-c12l-002
+GERun: node-c12l-002
+GERun: node-c12l-002
+GERun: node-c12l-002
+GERun: node-c12l-002
+GERun: node-c12l-002
+GERun: node-c12l-002
+GERun: node-c12l-002
+GERun: node-c12l-002
+GERun: node-c12l-002
+GERun: node-c12l-002
+GERun: node-c12l-002
+GERun: 
+GERun: GErun command being run:
+GERun:  mpirun --rsh=ssh -machinefile /tmpdir/job/1048772.undefined/machines.unique -np 40 -rr /home/uccawkj/Software/master-worker-C-Fortran-Python/mpi/C/master_worker/multiprocess_worker/build/tf.x

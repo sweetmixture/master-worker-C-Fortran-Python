@@ -11,7 +11,7 @@
 
 #define TF_WORKTAG 777
 #define TF_DIETAG  666
-#define TF_CPUS_PER_WORKER 4
+#define TF_CPUS_PER_WORKER 10
 
 #include <mpi.h>
 

@@ -54,7 +54,7 @@ int main(int argc, char* argv[])
 
 	/* taskfarm main */
 	if( brank == mastergroup_brank ){
-		master_worker_task_call_master( &BaseComm, &workgroup_config[0], n_workgroup, 16 );
+		master_worker_task_call_master( &BaseComm, &workgroup_config[0], n_workgroup, 44 );
 		printf("Finalising MASTER > \n");
 	}
 	else{

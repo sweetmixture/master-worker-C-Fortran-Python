@@ -1,0 +1,180 @@
+WORKGROUP [0] > MPI_Recv complete : task 401e80 0 55
+WORKGROUP [1] > MPI_Recv complete : task 401e80 1 55
+WORKGROUP [2] > MPI_Recv complete : task 401e80 2 55
+WORKGROUP [3] > MPI_Recv complete : task 401e80 3 55
+MASTER - Initial task send > MPI_Isend complete: master -> 0 (base-rank) with [ tag, size ] = [ 0, 10 ] - task_id: 0 
+MASTER - Initial task send > MPI_Isend complete: master -> 10 (base-rank) with [ tag, size ] = [ 1, 10 ] - task_id: 1 
+MASTER - Initial task send > MPI_Isend complete: master -> 20 (base-rank) with [ tag, size ] = [ 2, 10 ] - task_id: 2 
+MASTER - Initial task send > MPI_Isend complete: master -> 30 (base-rank) with [ tag, size ] = [ 3, 9 ] - task_id: 3 
+MASTER> MPI_Recv complete: from 10 - task_id: 1 
+MASTER> MPI_Send complete: master -> 10 (base-rank) - task_id: 4
+WORKGROUP [1] > MPI_Recv complete : task 401e80 4 55
+MASTER> MPI_Recv complete: from 20 - task_id: 2 
+MASTER> MPI_Send complete: master -> 20 (base-rank) - task_id: 5
+WORKGROUP [2] > MPI_Recv complete : task 401e80 5 55
+MASTER> MPI_Recv complete: from 0 - task_id: 0 
+MASTER> MPI_Send complete: master -> 0 (base-rank) - task_id: 6
+WORKGROUP [0] > MPI_Recv complete : task 401e80 6 55
+MASTER> MPI_Recv complete: from 30 - task_id: 3 
+MASTER> MPI_Send complete: master -> 30 (base-rank) - task_id: 7
+WORKGROUP [3] > MPI_Recv complete : task 401e80 7 55
+MASTER> MPI_Recv complete: from 10 - task_id: 4 
+MASTER> MPI_Send complete: master -> 10 (base-rank) - task_id: 8
+WORKGROUP [1] > MPI_Recv complete : task 401e80 8 55
+MASTER> MPI_Recv complete: from 0 - task_id: 6 
+MASTER> MPI_Send complete: master -> 0 (base-rank) - task_id: 9
+WORKGROUP [0] > MPI_Recv complete : task 401e80 9 55
+MASTER> MPI_Recv complete: from 20 - task_id: 5 
+MASTER> MPI_Send complete: master -> 20 (base-rank) - task_id: 10
+WORKGROUP [2] > MPI_Recv complete : task 401e80 10 55
+MASTER> MPI_Recv complete: from 30 - task_id: 7 
+MASTER> MPI_Send complete: master -> 30 (base-rank) - task_id: 11
+WORKGROUP [3] > MPI_Recv complete : task 401e80 11 55
+MASTER> MPI_Recv complete: from 10 - task_id: 8 
+WORKGROUP [1] > MPI_Recv complete : task 401e80 12 55
+MASTER> MPI_Send complete: master -> 10 (base-rank) - task_id: 12
+MASTER> MPI_Recv complete: from 0 - task_id: 9 
+MASTER> MPI_Send complete: master -> 0 (base-rank) - task_id: 13
+WORKGROUP [0] > MPI_Recv complete : task 401e80 13 55
+MASTER> MPI_Recv complete: from 20 - task_id: 10 
+WORKGROUP [2] > MPI_Recv complete : task 401e80 14 55
+MASTER> MPI_Send complete: master -> 20 (base-rank) - task_id: 14
+MASTER> MPI_Recv complete: from 30 - task_id: 11 
+MASTER> MPI_Send complete: master -> 30 (base-rank) - task_id: 15
+WORKGROUP [3] > MPI_Recv complete : task 401e80 15 55
+MASTER> MPI_Recv complete: from 10 - task_id: 12 
+MASTER> MPI_Send complete: master -> 10 (base-rank) - task_id: 16
+WORKGROUP [1] > MPI_Recv complete : task 401e80 16 55
+MASTER> MPI_Recv complete: from 0 - task_id: 13 
+MASTER> MPI_Send complete: master -> 0 (base-rank) - task_id: 17
+WORKGROUP [0] > MPI_Recv complete : task 401e80 17 55
+MASTER> MPI_Recv complete: from 20 - task_id: 14 
+MASTER> MPI_Send complete: master -> 20 (base-rank) - task_id: 18
+WORKGROUP [2] > MPI_Recv complete : task 401e80 18 55
+MASTER> MPI_Recv complete: from 30 - task_id: 15 
+WORKGROUP [3] > MPI_Recv complete : task 401e80 19 55
+MASTER> MPI_Send complete: master -> 30 (base-rank) - task_id: 19
+MASTER> MPI_Recv complete: from 10 - task_id: 16 
+WORKGROUP [1] > MPI_Recv complete : task 401e80 20 55
+MASTER> MPI_Send complete: master -> 10 (base-rank) - task_id: 20
+MASTER> MPI_Recv complete: from 0 - task_id: 17 
+MASTER> MPI_Send complete: master -> 0 (base-rank) - task_id: 21
+WORKGROUP [0] > MPI_Recv complete : task 401e80 21 55
+MASTER> MPI_Recv complete: from 20 - task_id: 18 
+WORKGROUP [2] > MPI_Recv complete : task 401e80 22 55
+MASTER> MPI_Send complete: master -> 20 (base-rank) - task_id: 22
+MASTER> MPI_Recv complete: from 30 - task_id: 19 
+WORKGROUP [3] > MPI_Recv complete : task 401e80 23 55
+MASTER> MPI_Send complete: master -> 30 (base-rank) - task_id: 23
+MASTER> MPI_Recv complete: from 10 - task_id: 20 
+MASTER> MPI_Send complete: master -> 10 (base-rank) - task_id: 24
+WORKGROUP [1] > MPI_Recv complete : task 401e80 24 55
+MASTER> MPI_Recv complete: from 0 - task_id: 21 
+MASTER> MPI_Send complete: master -> 0 (base-rank) - task_id: 25
+WORKGROUP [0] > MPI_Recv complete : task 401e80 25 55
+MASTER> MPI_Recv complete: from 20 - task_id: 22 
+MASTER> MPI_Send complete: master -> 20 (base-rank) - task_id: 26
+WORKGROUP [2] > MPI_Recv complete : task 401e80 26 55
+MASTER> MPI_Recv complete: from 30 - task_id: 23 
+MASTER> MPI_Send complete: master -> 30 (base-rank) - task_id: 27
+WORKGROUP [3] > MPI_Recv complete : task 401e80 27 55
+MASTER> MPI_Recv complete: from 10 - task_id: 24 
+WORKGROUP [1] > MPI_Recv complete : task 401e80 28 55
+MASTER> MPI_Send complete: master -> 10 (base-rank) - task_id: 28
+WORKGROUP [0] > MPI_Recv complete : task 401e80 29 55
+MASTER> MPI_Recv complete: from 0 - task_id: 25 
+MASTER> MPI_Send complete: master -> 0 (base-rank) - task_id: 29
+MASTER> MPI_Recv complete: from 20 - task_id: 26 
+MASTER> MPI_Send complete: master -> 20 (base-rank) - task_id: 30
+WORKGROUP [2] > MPI_Recv complete : task 401e80 30 55
+MASTER> MPI_Recv complete: from 10 - task_id: 28 
+WORKGROUP [1] > MPI_Recv complete : task 401e80 31 55
+MASTER> MPI_Send complete: master -> 10 (base-rank) - task_id: 31
+MASTER> MPI_Recv complete: from 30 - task_id: 27 
+WORKGROUP [3] > MPI_Recv complete : task 401e80 32 55
+MASTER> MPI_Send complete: master -> 30 (base-rank) - task_id: 32
+MASTER> MPI_Recv complete: from 0 - task_id: 29 
+WORKGROUP [0] > MPI_Recv complete : task 401e80 33 55
+MASTER> MPI_Send complete: master -> 0 (base-rank) - task_id: 33
+MASTER> MPI_Recv complete: from 20 - task_id: 30 
+WORKGROUP [2] > MPI_Recv complete : task 401e80 34 55
+MASTER> MPI_Send complete: master -> 20 (base-rank) - task_id: 34
+MASTER> MPI_Recv complete: from 10 - task_id: 31 
+MASTER> MPI_Send complete: master -> 10 (base-rank) - task_id: 35
+WORKGROUP [1] > MPI_Recv complete : task 401e80 35 55
+MASTER> MPI_Recv complete: from 20 - task_id: 34 
+MASTER> MPI_Send complete: master -> 20 (base-rank) - task_id: 36
+WORKGROUP [2] > MPI_Recv complete : task 401e80 36 55
+MASTER> MPI_Recv complete: from 0 - task_id: 33 
+MASTER> MPI_Send complete: master -> 0 (base-rank) - task_id: 37
+WORKGROUP [0] > MPI_Recv complete : task 401e80 37 55
+MASTER> MPI_Recv complete: from 30 - task_id: 32 
+MASTER> MPI_Send complete: master -> 30 (base-rank) - task_id: 38
+WORKGROUP [3] > MPI_Recv complete : task 401e80 38 55
+MASTER> MPI_Recv complete: from 10 - task_id: 35 
+MASTER> MPI_Send complete: master -> 10 (base-rank) - task_id: 39
+WORKGROUP [1] > MPI_Recv complete : task 401e80 39 55
+MASTER> MPI_Recv complete: from 0 - task_id: 37 
+MASTER> MPI_Send complete: master -> 0 (base-rank) - task_id: 40
+WORKGROUP [0] > MPI_Recv complete : task 401e80 40 55
+MASTER> MPI_Recv complete: from 20 - task_id: 36 
+MASTER> MPI_Send complete: master -> 20 (base-rank) - task_id: 41
+WORKGROUP [2] > MPI_Recv complete : task 401e80 41 55
+MASTER> MPI_Recv complete: from 30 - task_id: 38 
+MASTER> MPI_Send complete: master -> 30 (base-rank) - task_id: 42
+WORKGROUP [3] > MPI_Recv complete : task 401e80 42 55
+MASTER> MPI_Recv complete: from 10 - task_id: 39 
+MASTER> MPI_Send complete: master -> 10 (base-rank) - task_id: 43
+WORKGROUP [1] > MPI_Recv complete : task 401e80 43 55
+MASTER> MPI_Recv complete: from 0 - task_id: 40 
+MASTER> MPI_Recv complete: from 20 - task_id: 41 
+MASTER> MPI_Recv complete: from 30 - task_id: 42 
+MASTER> MPI_Recv complete: from 10 - task_id: 43 
+MASTER - DIETAG > MPI_Send complete: master -> 0 (base-rank)
+WORKGROUP [0] > MPI_Recv DIETAG complete
+Finalising Workgroups > base_rank : 0 - workgroup_tag 0 -  wr / ws: 0 / 10 
+Finalising Workgroups > base_rank : 1 - workgroup_tag 0 -  wr / ws: 1 / 10 
+Finalising Workgroups > base_rank : 2 - workgroup_tag 0 -  wr / ws: 2 / 10 
+Finalising Workgroups > base_rank : 3 - workgroup_tag 0 -  wr / ws: 3 / 10 
+Finalising Workgroups > base_rank : 4 - workgroup_tag 0 -  wr / ws: 4 / 10 
+Finalising Workgroups > base_rank : 5 - workgroup_tag 0 -  wr / ws: 5 / 10 
+Finalising Workgroups > base_rank : 6 - workgroup_tag 0 -  wr / ws: 6 / 10 
+Finalising Workgroups > base_rank : 7 - workgroup_tag 0 -  wr / ws: 7 / 10 
+Finalising Workgroups > base_rank : 8 - workgroup_tag 0 -  wr / ws: 8 / 10 
+Finalising Workgroups > base_rank : 9 - workgroup_tag 0 -  wr / ws: 9 / 10 
+WORKGROUP [1] > MPI_Recv DIETAG complete
+Finalising Workgroups > base_rank : 10 - workgroup_tag 1 -  wr / ws: 0 / 10 
+MASTER - DIETAG > MPI_Send complete: master -> 10 (base-rank)
+Finalising Workgroups > base_rank : 11 - workgroup_tag 1 -  wr / ws: 1 / 10 
+Finalising Workgroups > base_rank : 12 - workgroup_tag 1 -  wr / ws: 2 / 10 
+Finalising Workgroups > base_rank : 13 - workgroup_tag 1 -  wr / ws: 3 / 10 
+Finalising Workgroups > base_rank : 14 - workgroup_tag 1 -  wr / ws: 4 / 10 
+Finalising Workgroups > base_rank : 15 - workgroup_tag 1 -  wr / ws: 5 / 10 
+Finalising Workgroups > base_rank : 16 - workgroup_tag 1 -  wr / ws: 6 / 10 
+Finalising Workgroups > base_rank : 17 - workgroup_tag 1 -  wr / ws: 7 / 10 
+Finalising Workgroups > base_rank : 18 - workgroup_tag 1 -  wr / ws: 8 / 10 
+Finalising Workgroups > base_rank : 19 - workgroup_tag 1 -  wr / ws: 9 / 10 
+MASTER - DIETAG > MPI_Send complete: master -> 20 (base-rank)
+WORKGROUP [2] > MPI_Recv DIETAG complete
+Finalising Workgroups > base_rank : 20 - workgroup_tag 2 -  wr / ws: 0 / 10 
+Finalising Workgroups > base_rank : 21 - workgroup_tag 2 -  wr / ws: 1 / 10 
+Finalising Workgroups > base_rank : 22 - workgroup_tag 2 -  wr / ws: 2 / 10 
+Finalising Workgroups > base_rank : 23 - workgroup_tag 2 -  wr / ws: 3 / 10 
+Finalising Workgroups > base_rank : 24 - workgroup_tag 2 -  wr / ws: 4 / 10 
+Finalising Workgroups > base_rank : 25 - workgroup_tag 2 -  wr / ws: 5 / 10 
+Finalising Workgroups > base_rank : 26 - workgroup_tag 2 -  wr / ws: 6 / 10 
+Finalising Workgroups > base_rank : 27 - workgroup_tag 2 -  wr / ws: 7 / 10 
+Finalising Workgroups > base_rank : 28 - workgroup_tag 2 -  wr / ws: 8 / 10 
+Finalising Workgroups > base_rank : 29 - workgroup_tag 2 -  wr / ws: 9 / 10 
+WORKGROUP [3] > MPI_Recv DIETAG complete
+Finalising Workgroups > base_rank : 30 - workgroup_tag 3 -  wr / ws: 0 / 9 
+MASTER - DIETAG > MPI_Send complete: master -> 30 (base-rank)
+Finalising Workgroups > base_rank : 31 - workgroup_tag 3 -  wr / ws: 1 / 9 
+Finalising Workgroups > base_rank : 32 - workgroup_tag 3 -  wr / ws: 2 / 9 
+Finalising Workgroups > base_rank : 33 - workgroup_tag 3 -  wr / ws: 3 / 9 
+Finalising Workgroups > base_rank : 34 - workgroup_tag 3 -  wr / ws: 4 / 9 
+Finalising Workgroups > base_rank : 35 - workgroup_tag 3 -  wr / ws: 5 / 9 
+Finalising Workgroups > base_rank : 36 - workgroup_tag 3 -  wr / ws: 6 / 9 
+Finalising Workgroups > base_rank : 37 - workgroup_tag 3 -  wr / ws: 7 / 9 
+Finalising Workgroups > base_rank : 38 - workgroup_tag 3 -  wr / ws: 8 / 9 
+Finalising MASTER > 

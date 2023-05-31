@@ -66,7 +66,6 @@ void subprogram_pi( const MPI_Comm* comm, const int task_id )
 
 	if( rank == 0 ){
 		//fprintf(fileptr,"task_id: %d ntasks: %d rank: %d start: %s \n",task_id, size,rank,start_timestamp);
-		//printf("task_id: %d ntasks: %d rank: %d start: %s \n",task_id, size,rank,start_timestamp);
 	}
 
 	for(iter = 0; iter < iter_max; iter++ ){
@@ -110,19 +109,13 @@ void subprogram_pi( const MPI_Comm* comm, const int task_id )
 	MPI_Comm_size(*comm,&size);
 
 	if( rank == 0){
-		//fprintf(fileptr,"task_id: %d ntasks: %d rank: %d start/end: %s  /  %s : \t ",task_id,size,rank,start_timestamp,end_timestamp);
 		fprintf(fileptr,"{'task_id': %d, 'ntasks': %d, 'timing': {'start': '%s', 'end': '%s', 'elapsed_t': %.6lf }, ",task_id,size,start_timestamp,end_timestamp,t_end - t_start);
-		//printf("task_id: %d ntasks: %d rank: %d start/end: %s/%s elapsed_t: %.3f \n",task_id,size,rank,start_timestamp,end_timestamp,t_end - t_start);
 	}
 
 	// Output the final estimate of pi from the root process
 	if (rank == 0) {
 		pi_total /= size;
 		fprintf(fileptr," 'result' : %.8lf }\n",pi_total);
-		//fprintf(fileptr,"Approximate value of pi: %.10f / ", pi_total);
-		//fprintf(fileptr,"Elapsed time: %.3f seconds\n", t_end - t_start);
-		//printf("Approximate value of pi: %.10f / ", pi_total);
-		//printf("Elapsed time: %.3f seconds\n", t_end - t_start);
 	}
 	if( rank == 0 ){ fclose(fileptr); }
 	free(data);
