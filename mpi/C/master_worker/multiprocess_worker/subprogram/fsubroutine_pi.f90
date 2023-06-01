@@ -1,42 +1,40 @@
+subroutine fortran_subprogram_pi( comm, task_id )
 
-
-
-program calculate_pi_mpi
-
-  use mpi
+  use mpi_f08
 
   implicit none
-  
-  integer :: rank, size, ierr
 
+  ! subroutine args 
+  integer, intent(in) :: comm, task_id
+ 
+  ! same with main variables
+  integer :: rank, size, ierr
   integer, parameter :: root = 0
-  integer, parameter  :: iter_max  = 16
+  integer, parameter :: iter_max  = 16
+  integer, parameter :: N = 100000000
 
   integer :: i, iter
 
-  integer :: N, N_local, N_inside = 0, N_total_inside
+  integer :: N_local, N_inside = 0, N_total_inside
   double precision :: x, y, pi_local, pi_total, t_start, t_end, pi_res
   character(len=40) :: start_timestamp, end_timestamp, filename,temp
+  double precision :: mpi_tstart, mpi_tend, mpi_elapsed_t
+  character(len=100) :: string
 
   double precision, allocatable :: res(:)
 
-  !allocate(res(0:iter_max))
   allocate(res(iter_max))
 
-  call MPI_Init(ierr)
   call MPI_Comm_rank(MPI_COMM_WORLD, rank, ierr)
   call MPI_Comm_size(MPI_COMM_WORLD, size, ierr)
 
   call random_seed()
 
-  ! call random_number(x)
-  ! call random_number(y)
-  ! write(start_timestamp,*) rank, size
-
+  mpi_tstart = MPI_Wtime()
   start_timestamp = getCurrentDateTime()
 
   ! filename set
-  write(temp,*) size
+  write(temp,*) task_id
   write(filename,'(a)') adjustl("task_id_"//trim(adjustl(temp)))
 
   ! file open
@@ -44,9 +42,6 @@ program calculate_pi_mpi
     open(unit=1,file=filename,status='replace')
   end if 
 
-
-  N = 100000000
-  !N = 100000
   N_local = N / size
 
   ! loop
@@ -78,23 +73,26 @@ program calculate_pi_mpi
   end do
   pi_total = pi_res / real(iter_max)
 
-  write(*,'(f8.6)') pi_total/real(size)
-
-
-
-
-
-
+  ! final record
+  pi_res = pi_total/real(size)
+  ! write(*,'(f8.6)') pi_total/real(size)
+  mpi_tend = MPI_Wtime()
   end_timestamp = getCurrentDateTime()
+  mpi_elapsed_t = mpi_tend - mpi_tstart
 
   ! file close
   if ( rank == 0 ) then
+    write(1,'(a, a, a, a, a, I4, a, I4 )',advance="no") "start: ", trim(adjustl(start_timestamp)), " end: ", trim(adjustl(end_timestamp)), &
+                      " task_id: ", task_id, " n_tasks: ", size 
+    ! write(1,'(a, a, a, a )') "start: ", start_timestamp, " end: ", end_timestamp
+    write(1,'(" result: ", f12.10, " elapsed_time: ", f12.8)') pi_res, mpi_elapsed_t
     close(1)
   end if
 
   deallocate(res)
 
-  call MPI_FINALIZE(ierr)
+  ! practically the main subroutine is done
+  ! ---------------------------------------------------------------------
 
 contains
 
@@ -110,4 +108,4 @@ contains
     return
   end function getCurrentDateTime
 
-end program calculate_pi_mpi
+end subroutine fortran_subprogram_pi
