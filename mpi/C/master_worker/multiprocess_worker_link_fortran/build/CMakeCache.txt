@@ -75,6 +75,24 @@ CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 //Enable/Disable output of compile commands during generation.
 CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=
 
+//Fortran compiler
+CMAKE_Fortran_COMPILER:FILEPATH=/shared/ucl/apps/intel/2018.Update3/compilers_and_libraries_2018.3.222/linux/bin/intel64/ifort
+
+//Flags used by the Fortran compiler during all build types.
+CMAKE_Fortran_FLAGS:STRING=
+
+//Flags used by the Fortran compiler during DEBUG builds.
+CMAKE_Fortran_FLAGS_DEBUG:STRING=-g
+
+//Flags used by the Fortran compiler during MINSIZEREL builds.
+CMAKE_Fortran_FLAGS_MINSIZEREL:STRING=-Os
+
+//Flags used by the Fortran compiler during RELEASE builds.
+CMAKE_Fortran_FLAGS_RELEASE:STRING=-O3
+
+//Flags used by the Fortran compiler during RELWITHDEBINFO builds.
+CMAKE_Fortran_FLAGS_RELWITHDEBINFO:STRING=-O2 -g
+
 //Install path prefix, prepended onto install directories.
 CMAKE_INSTALL_PREFIX:PATH=/usr/local
 
@@ -240,11 +258,41 @@ MPI_C_LIB_NAMES:STRING=mpi;mpigi;dl;rt;pthread
 //MPI C linker flags
 MPI_C_LINK_FLAGS:STRING=-Xlinker --enable-new-dtags -Xlinker -rpath -Xlinker /shared/ucl/apps/intel/2018.Update3/impi/2018.3.222/intel64/lib/release_mt -Xlinker -rpath -Xlinker /shared/ucl/apps/intel/2018.Update3/impi/2018.3.222/intel64/lib -Xlinker -rpath -Xlinker /opt/intel/mpi-rt/2017.0.0/intel64/lib/release_mt -Xlinker -rpath -Xlinker /opt/intel/mpi-rt/2017.0.0/intel64/lib -L/lustre/shared/ucl/apps/intel/2018.Update3/compilers_and_libraries_2018.3.222/linux/mpi/intel64/lib/release_mt -L/lustre/shared/ucl/apps/intel/2018.Update3/compilers_and_libraries_2018.3.222/linux/mpi/intel64/lib
 
+//MPI Fortran additional include directories
+MPI_Fortran_ADDITIONAL_INCLUDE_DIRS:STRING=
+
+//MPI compiler for Fortran
+MPI_Fortran_COMPILER:FILEPATH=/shared/ucl/apps/intel/2018.Update3/impi/2018.3.222/intel64/bin/mpiifort
+
+//MPI Fortran compiler wrapper include directories
+MPI_Fortran_COMPILER_INCLUDE_DIRS:STRING=/lustre/shared/ucl/apps/intel/2018.Update3/compilers_and_libraries_2018.3.222/linux/mpi/intel64/include;/lustre/shared/ucl/apps/intel/2018.Update3/compilers_and_libraries_2018.3.222/linux/mpi/intel64/include
+
+//MPI Fortran compilation definitions
+MPI_Fortran_COMPILE_DEFINITIONS:STRING=
+
+//MPI Fortran compilation options
+MPI_Fortran_COMPILE_OPTIONS:STRING=
+
+//Path to a file.
+MPI_Fortran_F77_HEADER_DIR:PATH=/lustre/shared/ucl/apps/intel/2018.Update3/compilers_and_libraries_2018.3.222/linux/mpi/intel64/include
+
+//MPI Fortran libraries to link against
+MPI_Fortran_LIB_NAMES:STRING=mpifort;mpi;mpigi;dl;rt;pthread
+
+//MPI Fortran linker flags
+MPI_Fortran_LINK_FLAGS:STRING=-Xlinker --enable-new-dtags -Xlinker -rpath -Xlinker /shared/ucl/apps/intel/2018.Update3/impi/2018.3.222/intel64/lib/release_mt -Xlinker -rpath -Xlinker /shared/ucl/apps/intel/2018.Update3/impi/2018.3.222/intel64/lib -Xlinker -rpath -Xlinker /opt/intel/mpi-rt/2017.0.0/intel64/lib/release_mt -Xlinker -rpath -Xlinker /opt/intel/mpi-rt/2017.0.0/intel64/lib -L/lustre/shared/ucl/apps/intel/2018.Update3/compilers_and_libraries_2018.3.222/linux/mpi/intel64/lib/release_mt -L/lustre/shared/ucl/apps/intel/2018.Update3/compilers_and_libraries_2018.3.222/linux/mpi/intel64/lib
+
+//Path to a file.
+MPI_Fortran_MODULE_DIR:PATH=/lustre/shared/ucl/apps/intel/2018.Update3/compilers_and_libraries_2018.3.222/linux/mpi/intel64/include
+
 //Location of the dl library for MPI
 MPI_dl_LIBRARY:FILEPATH=/lib64/libdl.so
 
 //Location of the mpi library for MPI
 MPI_mpi_LIBRARY:FILEPATH=/shared/ucl/apps/intel/2018.Update3/impi/2018.3.222/lib64/libmpi.so
+
+//Location of the mpifort library for MPI
+MPI_mpifort_LIBRARY:FILEPATH=/shared/ucl/apps/intel/2018.Update3/impi/2018.3.222/lib64/libmpifort.so
 
 //Location of the mpigi library for MPI
 MPI_mpigi_LIBRARY:FILEPATH=/shared/ucl/apps/intel/2018.Update3/impi/2018.3.222/lib64/libmpigi.a
@@ -315,6 +363,18 @@ CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 CMAKE_EXPORT_COMPILE_COMMANDS-ADVANCED:INTERNAL=1
 //Name of external makefile project generator.
 CMAKE_EXTRA_GENERATOR:INTERNAL=
+//ADVANCED property for variable: CMAKE_Fortran_COMPILER
+CMAKE_Fortran_COMPILER-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_Fortran_FLAGS
+CMAKE_Fortran_FLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_Fortran_FLAGS_DEBUG
+CMAKE_Fortran_FLAGS_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_Fortran_FLAGS_MINSIZEREL
+CMAKE_Fortran_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_Fortran_FLAGS_RELEASE
+CMAKE_Fortran_FLAGS_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_Fortran_FLAGS_RELWITHDEBINFO
+CMAKE_Fortran_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //Name of generator.
 CMAKE_GENERATOR:INTERNAL=Unix Makefiles
 //Generator instance identifier.
@@ -389,9 +449,11 @@ CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding MPI
-FIND_PACKAGE_MESSAGE_DETAILS_MPI:INTERNAL=[TRUE][c ][v3.1()]
+FIND_PACKAGE_MESSAGE_DETAILS_MPI:INTERNAL=[TRUE][TRUE][c ][v3.1()]
 //Details about finding MPI_C
 FIND_PACKAGE_MESSAGE_DETAILS_MPI_C:INTERNAL=[/shared/ucl/apps/intel/2018.Update3/impi/2018.3.222/lib64/libmpi.so][/shared/ucl/apps/intel/2018.Update3/impi/2018.3.222/lib64/libmpigi.a][/lib64/libdl.so][/lib64/librt.so][/lib64/libpthread.so][mpi;mpigi;dl;rt;pthread][/lustre/shared/ucl/apps/intel/2018.Update3/compilers_and_libraries_2018.3.222/linux/mpi/intel64/include][TRUE][v3.1()]
+//Details about finding MPI_Fortran
+FIND_PACKAGE_MESSAGE_DETAILS_MPI_Fortran:INTERNAL=[/shared/ucl/apps/intel/2018.Update3/impi/2018.3.222/lib64/libmpifort.so][/shared/ucl/apps/intel/2018.Update3/impi/2018.3.222/lib64/libmpi.so][/shared/ucl/apps/intel/2018.Update3/impi/2018.3.222/lib64/libmpigi.a][/lib64/libdl.so][/lib64/librt.so][/lib64/libpthread.so][mpifort;mpi;mpigi;dl;rt;pthread][TRUE][v3.1()]
 //ADVANCED property for variable: MPIEXEC_EXECUTABLE
 MPIEXEC_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MPIEXEC_MAX_NUMPROCS
@@ -418,12 +480,42 @@ MPI_C_HEADER_DIR-ADVANCED:INTERNAL=1
 MPI_C_LIB_NAMES-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MPI_C_LINK_FLAGS
 MPI_C_LINK_FLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_Fortran_ADDITIONAL_INCLUDE_DIRS
+MPI_Fortran_ADDITIONAL_INCLUDE_DIRS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_Fortran_COMPILER
+MPI_Fortran_COMPILER-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_Fortran_COMPILER_INCLUDE_DIRS
+MPI_Fortran_COMPILER_INCLUDE_DIRS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_Fortran_COMPILE_DEFINITIONS
+MPI_Fortran_COMPILE_DEFINITIONS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_Fortran_COMPILE_OPTIONS
+MPI_Fortran_COMPILE_OPTIONS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_Fortran_F77_HEADER_DIR
+MPI_Fortran_F77_HEADER_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_Fortran_LIB_NAMES
+MPI_Fortran_LIB_NAMES-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_Fortran_LINK_FLAGS
+MPI_Fortran_LINK_FLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_Fortran_MODULE_DIR
+MPI_Fortran_MODULE_DIR-ADVANCED:INTERNAL=1
 //Result of TRY_COMPILE
 MPI_RESULT_C_test_mpi_normal:INTERNAL=TRUE
+//Result of TRY_COMPILE
+MPI_RESULT_Fortran_mpiver_F08_MODULE:INTERNAL=TRUE
+//Result of TRY_COMPILE
+MPI_RESULT_Fortran_test_mpi_F08_MODULE:INTERNAL=TRUE
+//Result of TRY_COMPILE
+MPI_RESULT_Fortran_test_mpi_F77_HEADER:INTERNAL=TRUE
+//Result of TRY_COMPILE
+MPI_RESULT_Fortran_test_mpi_F77_HEADER_NOKIND:INTERNAL=FALSE
+//Result of TRY_COMPILE
+MPI_RESULT_Fortran_test_mpi_F90_MODULE:INTERNAL=TRUE
 //ADVANCED property for variable: MPI_dl_LIBRARY
 MPI_dl_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MPI_mpi_LIBRARY
 MPI_mpi_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_mpifort_LIBRARY
+MPI_mpifort_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MPI_mpigi_LIBRARY
 MPI_mpigi_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MPI_pthread_LIBRARY

@@ -1,3 +1,0 @@
-/lustre/home/uccawkj/Software/master-worker-C-Fortran-Python/mpi/C/master_worker/multiprocess_worker/subprogram/binding/simple_binding_1/build/CMakeFiles/rebuild_cache.dir
-/lustre/home/uccawkj/Software/master-worker-C-Fortran-Python/mpi/C/master_worker/multiprocess_worker/subprogram/binding/simple_binding_1/build/CMakeFiles/edit_cache.dir
-/lustre/home/uccawkj/Software/master-worker-C-Fortran-Python/mpi/C/master_worker/multiprocess_worker/subprogram/binding/simple_binding_1/build/CMakeFiles/cf.x.dir

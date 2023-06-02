@@ -201,6 +201,30 @@ master_worker_task.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tf.x.dir/build.make CMakeFiles/tf.x.dir/master_worker_task.c.s
 .PHONY : master_worker_task.c.s
 
+subprogram/fsubroutine_pi.o: subprogram/fsubroutine_pi.f90.o
+.PHONY : subprogram/fsubroutine_pi.o
+
+# target to build an object file
+subprogram/fsubroutine_pi.f90.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tf.x.dir/build.make CMakeFiles/tf.x.dir/subprogram/fsubroutine_pi.f90.o
+.PHONY : subprogram/fsubroutine_pi.f90.o
+
+subprogram/fsubroutine_pi.i: subprogram/fsubroutine_pi.f90.i
+.PHONY : subprogram/fsubroutine_pi.i
+
+# target to preprocess a source file
+subprogram/fsubroutine_pi.f90.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tf.x.dir/build.make CMakeFiles/tf.x.dir/subprogram/fsubroutine_pi.f90.i
+.PHONY : subprogram/fsubroutine_pi.f90.i
+
+subprogram/fsubroutine_pi.s: subprogram/fsubroutine_pi.f90.s
+.PHONY : subprogram/fsubroutine_pi.s
+
+# target to generate assembly for a file
+subprogram/fsubroutine_pi.f90.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tf.x.dir/build.make CMakeFiles/tf.x.dir/subprogram/fsubroutine_pi.f90.s
+.PHONY : subprogram/fsubroutine_pi.f90.s
+
 subprogram/subprogram_pi.o: subprogram/subprogram_pi.c.o
 .PHONY : subprogram/subprogram_pi.o
 
@@ -267,6 +291,9 @@ help:
 	@echo "... master_worker_task.o"
 	@echo "... master_worker_task.i"
 	@echo "... master_worker_task.s"
+	@echo "... subprogram/fsubroutine_pi.o"
+	@echo "... subprogram/fsubroutine_pi.i"
+	@echo "... subprogram/fsubroutine_pi.s"
 	@echo "... subprogram/subprogram_pi.o"
 	@echo "... subprogram/subprogram_pi.i"
 	@echo "... subprogram/subprogram_pi.s"

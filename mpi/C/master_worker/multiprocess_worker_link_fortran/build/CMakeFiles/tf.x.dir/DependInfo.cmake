@@ -4,6 +4,24 @@ set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
 
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
+  "Fortran"
+  )
+# The set of files for implicit dependencies of each language:
+set(CMAKE_DEPENDS_CHECK_Fortran
+  "/lustre/home/uccawkj/Software/master-worker-C-Fortran-Python/mpi/C/master_worker/multiprocess_worker_link_fortran/subprogram/fsubroutine_pi.f90" "/lustre/home/uccawkj/Software/master-worker-C-Fortran-Python/mpi/C/master_worker/multiprocess_worker_link_fortran/build/CMakeFiles/tf.x.dir/subprogram/fsubroutine_pi.f90.o"
+  )
+set(CMAKE_Fortran_COMPILER_ID "Intel")
+set(CMAKE_Fortran_SUBMODULE_SEP "@")
+set(CMAKE_Fortran_SUBMODULE_EXT ".smod")
+
+# The include file search paths:
+set(CMAKE_Fortran_TARGET_INCLUDE_PATH
+  "../tf.x"
+  "../PUBLIC"
+  "../includes"
+  "../develop/includes"
+  "../subprogram/includes"
+  "/lustre/shared/ucl/apps/intel/2018.Update3/compilers_and_libraries_2018.3.222/linux/mpi/intel64/include"
   )
 
 # The set of dependency files which are needed:

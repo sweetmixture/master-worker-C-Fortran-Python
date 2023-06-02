@@ -1,0 +1,539 @@
+MASTER - Initial task send > MPI_Isend complete: master -> 0 (base-rank) with [ tag, size ] = [ 0, 10 ] - task_id: 0 
+WORKGROUP [0] > MPI_Recv complete : task 406a70 0 55
+MASTER - Initial task send > MPI_Isend complete: master -> 10 (base-rank) with [ tag, size ] = [ 1, 10 ] - task_id: 1 
+WORKGROUP [1] > MPI_Recv complete : task 406a70 1 55
+MASTER - Initial task send > MPI_Isend complete: master -> 20 (base-rank) with [ tag, size ] = [ 2, 10 ] - task_id: 2 
+WORKGROUP [2] > MPI_Recv complete : task 406a70 2 55
+MASTER - Initial task send > MPI_Isend complete: master -> 30 (base-rank) with [ tag, size ] = [ 3, 10 ] - task_id: 3 
+WORKGROUP [3] > MPI_Recv complete : task 406a70 3 55
+MASTER - Initial task send > MPI_Isend complete: master -> 40 (base-rank) with [ tag, size ] = [ 4, 10 ] - task_id: 4 
+WORKGROUP [4] > MPI_Recv complete : task 406a70 4 55
+MASTER - Initial task send > MPI_Isend complete: master -> 50 (base-rank) with [ tag, size ] = [ 5, 10 ] - task_id: 5 
+WORKGROUP [0] > MPI_Bcast complete : worker_rank [0] task 406a70 0 55
+MASTER - Initial task send > MPI_Isend complete: master -> 60 (base-rank) with [ tag, size ] = [ 6, 10 ] - task_id: 6 
+WORKGROUP [2] > MPI_Bcast complete : worker_rank [0] task 406a70 2 55
+MASTER - Initial task send > MPI_Isend complete: master -> 70 (base-rank) with [ tag, size ] = [ 7, 9 ] - task_id: 7 
+WORKGROUP [3] > MPI_Bcast complete : worker_rank [0] task 406a70 3 55
+WORKGROUP [5] > MPI_Recv complete : task 406a70 5 55
+WORKGROUP [6] > MPI_Recv complete : task 406a70 6 55
+WORKGROUP [4] > MPI_Bcast complete : worker_rank [0] task 406a70 4 55
+WORKGROUP [5] > MPI_Bcast complete : worker_rank [0] task 406a70 5 55
+WORKGROUP [7] > MPI_Recv complete : task 406a70 7 55
+WORKGROUP [6] > MPI_Bcast complete : worker_rank [0] task 406a70 6 55
+WORKGROUP [7] > MPI_Bcast complete : worker_rank [0] task 406a70 7 55
+WORKGROUP [1] > MPI_Bcast complete : worker_rank [0] task 406a70 1 55
+FORTRAN> check task_id,comm:    0   -2080374780
+FORTRAN> check task_id,comm:    1   -2080374782
+FORTRAN> check task_id,comm:    2   -2080374782
+FORTRAN> check task_id,comm:    3   -2080374782
+FORTRAN> check task_id,comm:    4   -2080374782
+FORTRAN> check task_id,comm:    5   -2080374782
+FORTRAN> check task_id,comm:    6   -2080374782
+FORTRAN> check task_id,comm:    7   -2080374782
+MASTER> MPI_Recv complete: from 60 - task_id: 6 
+MASTER> MPI_Send complete: master -> 60 (base-rank) - task_id: 8
+MASTER> MPI_Recv complete: from 40 - task_id: 4 
+MASTER> MPI_Send complete: master -> 40 (base-rank) - task_id: 9
+WORKGROUP [6] > MPI_Recv complete : task 406a70 8 55
+MASTER> MPI_Recv complete: from 50 - task_id: 5 
+WORKGROUP [4] > MPI_Recv complete : task 406a70 9 55
+WORKGROUP [4] > MPI_Bcast complete : worker_rank [0] task 406a70 9 55
+FORTRAN> check task_id,comm:    9   -2080374782
+MASTER> MPI_Send complete: master -> 50 (base-rank) - task_id: 10
+WORKGROUP [5] > MPI_Recv complete : task 406a70 10 55
+WORKGROUP [6] > MPI_Bcast complete : worker_rank [0] task 406a70 8 55
+WORKGROUP [5] > MPI_Bcast complete : worker_rank [0] task 406a70 10 55
+FORTRAN> check task_id,comm:   10   -2080374782
+FORTRAN> check task_id,comm:    8   -2080374782
+MASTER> MPI_Recv complete: from 10 - task_id: 1 
+MASTER> MPI_Send complete: master -> 10 (base-rank) - task_id: 11
+WORKGROUP [1] > MPI_Recv complete : task 406a70 11 55
+WORKGROUP [1] > MPI_Bcast complete : worker_rank [0] task 406a70 11 55
+FORTRAN> check task_id,comm:   11   -2080374782
+MASTER> MPI_Recv complete: from 20 - task_id: 2 
+MASTER> MPI_Send complete: master -> 20 (base-rank) - task_id: 12
+WORKGROUP [2] > MPI_Recv complete : task 406a70 12 55
+WORKGROUP [2] > MPI_Bcast complete : worker_rank [0] task 406a70 12 55
+FORTRAN> check task_id,comm:   12   -2080374782
+MASTER> MPI_Recv complete: from 30 - task_id: 3 
+MASTER> MPI_Send complete: master -> 30 (base-rank) - task_id: 13
+WORKGROUP [3] > MPI_Recv complete : task 406a70 13 55
+WORKGROUP [3] > MPI_Bcast complete : worker_rank [0] task 406a70 13 55
+FORTRAN> check task_id,comm:   13   -2080374782
+MASTER> MPI_Recv complete: from 0 - task_id: 0 
+MASTER> MPI_Send complete: master -> 0 (base-rank) - task_id: 14
+WORKGROUP [0] > MPI_Recv complete : task 406a70 14 55
+WORKGROUP [0] > MPI_Bcast complete : worker_rank [0] task 406a70 14 55
+FORTRAN> check task_id,comm:   14   -2080374780
+MASTER> MPI_Recv complete: from 70 - task_id: 7 
+MASTER> MPI_Send complete: master -> 70 (base-rank) - task_id: 15
+WORKGROUP [7] > MPI_Recv complete : task 406a70 15 55
+WORKGROUP [7] > MPI_Bcast complete : worker_rank [0] task 406a70 15 55
+FORTRAN> check task_id,comm:   15   -2080374782
+MASTER> MPI_Recv complete: from 60 - task_id: 8 
+MASTER> MPI_Send complete: master -> 60 (base-rank) - task_id: 16
+MASTER> MPI_Recv complete: from 40 - task_id: 9 
+WORKGROUP [6] > MPI_Recv complete : task 406a70 16 55
+WORKGROUP [6] > MPI_Bcast complete : worker_rank [0] task 406a70 16 55
+FORTRAN> check task_id,comm:   16   -2080374782
+MASTER> MPI_Send complete: master -> 40 (base-rank) - task_id: 17
+WORKGROUP [4] > MPI_Recv complete : task 406a70 17 55
+WORKGROUP [4] > MPI_Bcast complete : worker_rank [0] task 406a70 17 55
+FORTRAN> check task_id,comm:   17   -2080374782
+MASTER> MPI_Recv complete: from 50 - task_id: 10 
+MASTER> MPI_Send complete: master -> 50 (base-rank) - task_id: 18
+WORKGROUP [5] > MPI_Recv complete : task 406a70 18 55
+WORKGROUP [5] > MPI_Bcast complete : worker_rank [0] task 406a70 18 55
+FORTRAN> check task_id,comm:   18   -2080374782
+MASTER> MPI_Recv complete: from 10 - task_id: 11 
+MASTER> MPI_Send complete: master -> 10 (base-rank) - task_id: 19
+WORKGROUP [1] > MPI_Recv complete : task 406a70 19 55
+WORKGROUP [1] > MPI_Bcast complete : worker_rank [0] task 406a70 19 55
+FORTRAN> check task_id,comm:   19   -2080374782
+MASTER> MPI_Recv complete: from 20 - task_id: 12 
+MASTER> MPI_Send complete: master -> 20 (base-rank) - task_id: 20
+WORKGROUP [2] > MPI_Recv complete : task 406a70 20 55
+WORKGROUP [2] > MPI_Bcast complete : worker_rank [0] task 406a70 20 55
+FORTRAN> check task_id,comm:   20   -2080374782
+MASTER> MPI_Recv complete: from 30 - task_id: 13 
+MASTER> MPI_Send complete: master -> 30 (base-rank) - task_id: 21
+WORKGROUP [3] > MPI_Recv complete : task 406a70 21 55
+WORKGROUP [3] > MPI_Bcast complete : worker_rank [0] task 406a70 21 55
+FORTRAN> check task_id,comm:   21   -2080374782
+MASTER> MPI_Recv complete: from 0 - task_id: 14 
+MASTER> MPI_Send complete: master -> 0 (base-rank) - task_id: 22
+WORKGROUP [0] > MPI_Recv complete : task 406a70 22 55
+WORKGROUP [0] > MPI_Bcast complete : worker_rank [0] task 406a70 22 55
+FORTRAN> check task_id,comm:   22   -2080374780
+MASTER> MPI_Recv complete: from 70 - task_id: 15 
+MASTER> MPI_Send complete: master -> 70 (base-rank) - task_id: 23
+WORKGROUP [7] > MPI_Recv complete : task 406a70 23 55
+WORKGROUP [7] > MPI_Bcast complete : worker_rank [0] task 406a70 23 55
+FORTRAN> check task_id,comm:   23   -2080374782
+MASTER> MPI_Recv complete: from 40 - task_id: 17 
+MASTER> MPI_Send complete: master -> 40 (base-rank) - task_id: 24
+WORKGROUP [4] > MPI_Recv complete : task 406a70 24 55
+WORKGROUP [4] > MPI_Bcast complete : worker_rank [0] task 406a70 24 55
+FORTRAN> check task_id,comm:   24   -2080374782
+MASTER> MPI_Recv complete: from 50 - task_id: 18 
+MASTER> MPI_Send complete: master -> 50 (base-rank) - task_id: 25
+WORKGROUP [5] > MPI_Recv complete : task 406a70 25 55
+WORKGROUP [5] > MPI_Bcast complete : worker_rank [0] task 406a70 25 55
+FORTRAN> check task_id,comm:   25   -2080374782
+MASTER> MPI_Recv complete: from 60 - task_id: 16 
+MASTER> MPI_Send complete: master -> 60 (base-rank) - task_id: 26
+WORKGROUP [6] > MPI_Recv complete : task 406a70 26 55
+WORKGROUP [6] > MPI_Bcast complete : worker_rank [0] task 406a70 26 55
+FORTRAN> check task_id,comm:   26   -2080374782
+MASTER> MPI_Recv complete: from 10 - task_id: 19 
+MASTER> MPI_Send complete: master -> 10 (base-rank) - task_id: 27
+WORKGROUP [1] > MPI_Recv complete : task 406a70 27 55
+WORKGROUP [1] > MPI_Bcast complete : worker_rank [0] task 406a70 27 55
+FORTRAN> check task_id,comm:   27   -2080374782
+MASTER> MPI_Recv complete: from 20 - task_id: 20 
+MASTER> MPI_Send complete: master -> 20 (base-rank) - task_id: 28
+WORKGROUP [2] > MPI_Recv complete : task 406a70 28 55
+WORKGROUP [2] > MPI_Bcast complete : worker_rank [0] task 406a70 28 55
+FORTRAN> check task_id,comm:   28   -2080374782
+MASTER> MPI_Recv complete: from 30 - task_id: 21 
+MASTER> MPI_Send complete: master -> 30 (base-rank) - task_id: 29
+WORKGROUP [3] > MPI_Recv complete : task 406a70 29 55
+WORKGROUP [3] > MPI_Bcast complete : worker_rank [0] task 406a70 29 55
+FORTRAN> check task_id,comm:   29   -2080374782
+MASTER> MPI_Recv complete: from 0 - task_id: 22 
+MASTER> MPI_Send complete: master -> 0 (base-rank) - task_id: 30
+WORKGROUP [0] > MPI_Recv complete : task 406a70 30 55
+WORKGROUP [0] > MPI_Bcast complete : worker_rank [0] task 406a70 30 55
+FORTRAN> check task_id,comm:   30   -2080374780
+MASTER> MPI_Recv complete: from 70 - task_id: 23 
+MASTER> MPI_Send complete: master -> 70 (base-rank) - task_id: 31
+WORKGROUP [7] > MPI_Recv complete : task 406a70 31 55
+WORKGROUP [7] > MPI_Bcast complete : worker_rank [0] task 406a70 31 55
+FORTRAN> check task_id,comm:   31   -2080374782
+MASTER> MPI_Recv complete: from 60 - task_id: 26 
+MASTER> MPI_Send complete: master -> 60 (base-rank) - task_id: 32
+WORKGROUP [6] > MPI_Recv complete : task 406a70 32 55
+WORKGROUP [6] > MPI_Bcast complete : worker_rank [0] task 406a70 32 55
+FORTRAN> check task_id,comm:   32   -2080374782
+MASTER> MPI_Recv complete: from 40 - task_id: 24 
+MASTER> MPI_Send complete: master -> 40 (base-rank) - task_id: 33
+WORKGROUP [4] > MPI_Recv complete : task 406a70 33 55
+WORKGROUP [4] > MPI_Bcast complete : worker_rank [0] task 406a70 33 55
+FORTRAN> check task_id,comm:   33   -2080374782
+MASTER> MPI_Recv complete: from 50 - task_id: 25 
+MASTER> MPI_Send complete: master -> 50 (base-rank) - task_id: 34
+WORKGROUP [5] > MPI_Recv complete : task 406a70 34 55
+WORKGROUP [5] > MPI_Bcast complete : worker_rank [0] task 406a70 34 55
+FORTRAN> check task_id,comm:   34   -2080374782
+MASTER> MPI_Recv complete: from 20 - task_id: 28 
+MASTER> MPI_Send complete: master -> 20 (base-rank) - task_id: 35
+WORKGROUP [2] > MPI_Recv complete : task 406a70 35 55
+WORKGROUP [2] > MPI_Bcast complete : worker_rank [0] task 406a70 35 55
+FORTRAN> check task_id,comm:   35   -2080374782
+MASTER> MPI_Recv complete: from 10 - task_id: 27 
+MASTER> MPI_Send complete: master -> 10 (base-rank) - task_id: 36
+WORKGROUP [1] > MPI_Recv complete : task 406a70 36 55
+WORKGROUP [1] > MPI_Bcast complete : worker_rank [0] task 406a70 36 55
+FORTRAN> check task_id,comm:   36   -2080374782
+MASTER> MPI_Recv complete: from 30 - task_id: 29 
+MASTER> MPI_Send complete: master -> 30 (base-rank) - task_id: 37
+WORKGROUP [3] > MPI_Recv complete : task 406a70 37 55
+WORKGROUP [3] > MPI_Bcast complete : worker_rank [0] task 406a70 37 55
+FORTRAN> check task_id,comm:   37   -2080374782
+MASTER> MPI_Recv complete: from 0 - task_id: 30 
+MASTER> MPI_Send complete: master -> 0 (base-rank) - task_id: 38
+WORKGROUP [0] > MPI_Recv complete : task 406a70 38 55
+WORKGROUP [0] > MPI_Bcast complete : worker_rank [0] task 406a70 38 55
+FORTRAN> check task_id,comm:   38   -2080374780
+MASTER> MPI_Recv complete: from 70 - task_id: 31 
+MASTER> MPI_Send complete: master -> 70 (base-rank) - task_id: 39
+WORKGROUP [7] > MPI_Recv complete : task 406a70 39 55
+WORKGROUP [7] > MPI_Bcast complete : worker_rank [0] task 406a70 39 55
+FORTRAN> check task_id,comm:   39   -2080374782
+MASTER> MPI_Recv complete: from 60 - task_id: 32 
+MASTER> MPI_Send complete: master -> 60 (base-rank) - task_id: 40
+WORKGROUP [6] > MPI_Recv complete : task 406a70 40 55
+WORKGROUP [6] > MPI_Bcast complete : worker_rank [0] task 406a70 40 55
+FORTRAN> check task_id,comm:   40   -2080374782
+MASTER> MPI_Recv complete: from 50 - task_id: 34 
+MASTER> MPI_Send complete: master -> 50 (base-rank) - task_id: 41
+WORKGROUP [5] > MPI_Recv complete : task 406a70 41 55
+WORKGROUP [5] > MPI_Bcast complete : worker_rank [0] task 406a70 41 55
+FORTRAN> check task_id,comm:   41   -2080374782
+MASTER> MPI_Recv complete: from 40 - task_id: 33 
+MASTER> MPI_Send complete: master -> 40 (base-rank) - task_id: 42
+WORKGROUP [4] > MPI_Recv complete : task 406a70 42 55
+WORKGROUP [4] > MPI_Bcast complete : worker_rank [0] task 406a70 42 55
+FORTRAN> check task_id,comm:   42   -2080374782
+MASTER> MPI_Recv complete: from 20 - task_id: 35 
+MASTER> MPI_Send complete: master -> 20 (base-rank) - task_id: 43
+WORKGROUP [2] > MPI_Recv complete : task 406a70 43 55
+WORKGROUP [2] > MPI_Bcast complete : worker_rank [0] task 406a70 43 55
+FORTRAN> check task_id,comm:   43   -2080374782
+MASTER> MPI_Recv complete: from 10 - task_id: 36 
+MASTER> MPI_Send complete: master -> 10 (base-rank) - task_id: 44
+WORKGROUP [1] > MPI_Recv complete : task 406a70 44 55
+WORKGROUP [1] > MPI_Bcast complete : worker_rank [0] task 406a70 44 55
+FORTRAN> check task_id,comm:   44   -2080374782
+MASTER> MPI_Recv complete: from 30 - task_id: 37 
+MASTER> MPI_Send complete: master -> 30 (base-rank) - task_id: 45
+WORKGROUP [3] > MPI_Recv complete : task 406a70 45 55
+WORKGROUP [3] > MPI_Bcast complete : worker_rank [0] task 406a70 45 55
+FORTRAN> check task_id,comm:   45   -2080374782
+MASTER> MPI_Recv complete: from 0 - task_id: 38 
+MASTER> MPI_Send complete: master -> 0 (base-rank) - task_id: 46
+WORKGROUP [0] > MPI_Recv complete : task 406a70 46 55
+WORKGROUP [0] > MPI_Bcast complete : worker_rank [0] task 406a70 46 55
+FORTRAN> check task_id,comm:   46   -2080374780
+MASTER> MPI_Recv complete: from 70 - task_id: 39 
+MASTER> MPI_Send complete: master -> 70 (base-rank) - task_id: 47
+WORKGROUP [7] > MPI_Recv complete : task 406a70 47 55
+WORKGROUP [7] > MPI_Bcast complete : worker_rank [0] task 406a70 47 55
+FORTRAN> check task_id,comm:   47   -2080374782
+MASTER> MPI_Recv complete: from 60 - task_id: 40 
+MASTER> MPI_Send complete: master -> 60 (base-rank) - task_id: 48
+WORKGROUP [6] > MPI_Recv complete : task 406a70 48 55
+WORKGROUP [6] > MPI_Bcast complete : worker_rank [0] task 406a70 48 55
+FORTRAN> check task_id,comm:   48   -2080374782
+MASTER> MPI_Recv complete: from 50 - task_id: 41 
+MASTER> MPI_Send complete: master -> 50 (base-rank) - task_id: 49
+WORKGROUP [5] > MPI_Recv complete : task 406a70 49 55
+WORKGROUP [5] > MPI_Bcast complete : worker_rank [0] task 406a70 49 55
+FORTRAN> check task_id,comm:   49   -2080374782
+MASTER> MPI_Recv complete: from 40 - task_id: 42 
+MASTER> MPI_Send complete: master -> 40 (base-rank) - task_id: 50
+WORKGROUP [4] > MPI_Recv complete : task 406a70 50 55
+WORKGROUP [4] > MPI_Bcast complete : worker_rank [0] task 406a70 50 55
+FORTRAN> check task_id,comm:   50   -2080374782
+MASTER> MPI_Recv complete: from 10 - task_id: 44 
+MASTER> MPI_Send complete: master -> 10 (base-rank) - task_id: 51
+WORKGROUP [1] > MPI_Recv complete : task 406a70 51 55
+WORKGROUP [1] > MPI_Bcast complete : worker_rank [0] task 406a70 51 55
+FORTRAN> check task_id,comm:   51   -2080374782
+MASTER> MPI_Recv complete: from 20 - task_id: 43 
+MASTER> MPI_Send complete: master -> 20 (base-rank) - task_id: 52
+WORKGROUP [2] > MPI_Recv complete : task 406a70 52 55
+WORKGROUP [2] > MPI_Bcast complete : worker_rank [0] task 406a70 52 55
+FORTRAN> check task_id,comm:   52   -2080374782
+MASTER> MPI_Recv complete: from 30 - task_id: 45 
+MASTER> MPI_Send complete: master -> 30 (base-rank) - task_id: 53
+WORKGROUP [3] > MPI_Recv complete : task 406a70 53 55
+WORKGROUP [3] > MPI_Bcast complete : worker_rank [0] task 406a70 53 55
+FORTRAN> check task_id,comm:   53   -2080374782
+MASTER> MPI_Recv complete: from 0 - task_id: 46 
+MASTER> MPI_Send complete: master -> 0 (base-rank) - task_id: 54
+WORKGROUP [0] > MPI_Recv complete : task 406a70 54 55
+WORKGROUP [0] > MPI_Bcast complete : worker_rank [0] task 406a70 54 55
+FORTRAN> check task_id,comm:   54   -2080374780
+MASTER> MPI_Recv complete: from 70 - task_id: 47 
+MASTER> MPI_Send complete: master -> 70 (base-rank) - task_id: 55
+WORKGROUP [7] > MPI_Recv complete : task 406a70 55 55
+WORKGROUP [7] > MPI_Bcast complete : worker_rank [0] task 406a70 55 55
+FORTRAN> check task_id,comm:   55   -2080374782
+MASTER> MPI_Recv complete: from 60 - task_id: 48 
+MASTER> MPI_Send complete: master -> 60 (base-rank) - task_id: 56
+WORKGROUP [6] > MPI_Recv complete : task 406a70 56 55
+WORKGROUP [6] > MPI_Bcast complete : worker_rank [0] task 406a70 56 55
+FORTRAN> check task_id,comm:   56   -2080374782
+MASTER> MPI_Recv complete: from 50 - task_id: 49 
+MASTER> MPI_Send complete: master -> 50 (base-rank) - task_id: 57
+WORKGROUP [5] > MPI_Recv complete : task 406a70 57 55
+WORKGROUP [5] > MPI_Bcast complete : worker_rank [0] task 406a70 57 55
+FORTRAN> check task_id,comm:   57   -2080374782
+MASTER> MPI_Recv complete: from 40 - task_id: 50 
+MASTER> MPI_Send complete: master -> 40 (base-rank) - task_id: 58
+WORKGROUP [4] > MPI_Recv complete : task 406a70 58 55
+WORKGROUP [4] > MPI_Bcast complete : worker_rank [0] task 406a70 58 55
+FORTRAN> check task_id,comm:   58   -2080374782
+MASTER> MPI_Recv complete: from 10 - task_id: 51 
+MASTER> MPI_Send complete: master -> 10 (base-rank) - task_id: 59
+WORKGROUP [1] > MPI_Recv complete : task 406a70 59 55
+WORKGROUP [1] > MPI_Bcast complete : worker_rank [0] task 406a70 59 55
+FORTRAN> check task_id,comm:   59   -2080374782
+MASTER> MPI_Recv complete: from 20 - task_id: 52 
+MASTER> MPI_Send complete: master -> 20 (base-rank) - task_id: 60
+WORKGROUP [2] > MPI_Recv complete : task 406a70 60 55
+WORKGROUP [2] > MPI_Bcast complete : worker_rank [0] task 406a70 60 55
+FORTRAN> check task_id,comm:   60   -2080374782
+MASTER> MPI_Recv complete: from 30 - task_id: 53 
+MASTER> MPI_Send complete: master -> 30 (base-rank) - task_id: 61
+WORKGROUP [3] > MPI_Recv complete : task 406a70 61 55
+WORKGROUP [3] > MPI_Bcast complete : worker_rank [0] task 406a70 61 55
+FORTRAN> check task_id,comm:   61   -2080374782
+MASTER> MPI_Recv complete: from 0 - task_id: 54 
+MASTER> MPI_Send complete: master -> 0 (base-rank) - task_id: 62
+WORKGROUP [0] > MPI_Recv complete : task 406a70 62 55
+WORKGROUP [0] > MPI_Bcast complete : worker_rank [0] task 406a70 62 55
+FORTRAN> check task_id,comm:   62   -2080374780
+MASTER> MPI_Recv complete: from 70 - task_id: 55 
+MASTER> MPI_Send complete: master -> 70 (base-rank) - task_id: 63
+WORKGROUP [7] > MPI_Recv complete : task 406a70 63 55
+WORKGROUP [7] > MPI_Bcast complete : worker_rank [0] task 406a70 63 55
+FORTRAN> check task_id,comm:   63   -2080374782
+MASTER> MPI_Recv complete: from 60 - task_id: 56 
+MASTER> MPI_Send complete: master -> 60 (base-rank) - task_id: 64
+WORKGROUP [6] > MPI_Recv complete : task 406a70 64 55
+WORKGROUP [6] > MPI_Bcast complete : worker_rank [0] task 406a70 64 55
+FORTRAN> check task_id,comm:   64   -2080374782
+MASTER> MPI_Recv complete: from 50 - task_id: 57 
+MASTER> MPI_Send complete: master -> 50 (base-rank) - task_id: 65
+WORKGROUP [5] > MPI_Recv complete : task 406a70 65 55
+WORKGROUP [5] > MPI_Bcast complete : worker_rank [0] task 406a70 65 55
+FORTRAN> check task_id,comm:   65   -2080374782
+MASTER> MPI_Recv complete: from 40 - task_id: 58 
+MASTER> MPI_Send complete: master -> 40 (base-rank) - task_id: 66
+WORKGROUP [4] > MPI_Recv complete : task 406a70 66 55
+WORKGROUP [4] > MPI_Bcast complete : worker_rank [0] task 406a70 66 55
+FORTRAN> check task_id,comm:   66   -2080374782
+MASTER> MPI_Recv complete: from 10 - task_id: 59 
+MASTER> MPI_Send complete: master -> 10 (base-rank) - task_id: 67
+WORKGROUP [1] > MPI_Recv complete : task 406a70 67 55
+WORKGROUP [1] > MPI_Bcast complete : worker_rank [0] task 406a70 67 55
+FORTRAN> check task_id,comm:   67   -2080374782
+MASTER> MPI_Recv complete: from 20 - task_id: 60 
+MASTER> MPI_Send complete: master -> 20 (base-rank) - task_id: 68
+WORKGROUP [2] > MPI_Recv complete : task 406a70 68 55
+WORKGROUP [2] > MPI_Bcast complete : worker_rank [0] task 406a70 68 55
+FORTRAN> check task_id,comm:   68   -2080374782
+MASTER> MPI_Recv complete: from 30 - task_id: 61 
+MASTER> MPI_Send complete: master -> 30 (base-rank) - task_id: 69
+WORKGROUP [3] > MPI_Recv complete : task 406a70 69 55
+WORKGROUP [3] > MPI_Bcast complete : worker_rank [0] task 406a70 69 55
+FORTRAN> check task_id,comm:   69   -2080374782
+MASTER> MPI_Recv complete: from 0 - task_id: 62 
+MASTER> MPI_Send complete: master -> 0 (base-rank) - task_id: 70
+WORKGROUP [0] > MPI_Recv complete : task 406a70 70 55
+WORKGROUP [0] > MPI_Bcast complete : worker_rank [0] task 406a70 70 55
+FORTRAN> check task_id,comm:   70   -2080374780
+MASTER> MPI_Recv complete: from 70 - task_id: 63 
+MASTER> MPI_Send complete: master -> 70 (base-rank) - task_id: 71
+WORKGROUP [7] > MPI_Recv complete : task 406a70 71 55
+WORKGROUP [7] > MPI_Bcast complete : worker_rank [0] task 406a70 71 55
+FORTRAN> check task_id,comm:   71   -2080374782
+MASTER> MPI_Recv complete: from 60 - task_id: 64 
+MASTER> MPI_Send complete: master -> 60 (base-rank) - task_id: 72
+WORKGROUP [6] > MPI_Recv complete : task 406a70 72 55
+WORKGROUP [6] > MPI_Bcast complete : worker_rank [0] task 406a70 72 55
+FORTRAN> check task_id,comm:   72   -2080374782
+MASTER> MPI_Recv complete: from 50 - task_id: 65 
+MASTER> MPI_Send complete: master -> 50 (base-rank) - task_id: 73
+WORKGROUP [5] > MPI_Recv complete : task 406a70 73 55
+WORKGROUP [5] > MPI_Bcast complete : worker_rank [0] task 406a70 73 55
+FORTRAN> check task_id,comm:   73   -2080374782
+MASTER> MPI_Recv complete: from 40 - task_id: 66 
+MASTER> MPI_Send complete: master -> 40 (base-rank) - task_id: 74
+WORKGROUP [4] > MPI_Recv complete : task 406a70 74 55
+WORKGROUP [4] > MPI_Bcast complete : worker_rank [0] task 406a70 74 55
+FORTRAN> check task_id,comm:   74   -2080374782
+MASTER> MPI_Recv complete: from 10 - task_id: 67 
+MASTER> MPI_Send complete: master -> 10 (base-rank) - task_id: 75
+WORKGROUP [1] > MPI_Recv complete : task 406a70 75 55
+WORKGROUP [1] > MPI_Bcast complete : worker_rank [0] task 406a70 75 55
+FORTRAN> check task_id,comm:   75   -2080374782
+MASTER> MPI_Recv complete: from 20 - task_id: 68 
+MASTER> MPI_Send complete: master -> 20 (base-rank) - task_id: 76
+WORKGROUP [2] > MPI_Recv complete : task 406a70 76 55
+WORKGROUP [2] > MPI_Bcast complete : worker_rank [0] task 406a70 76 55
+FORTRAN> check task_id,comm:   76   -2080374782
+MASTER> MPI_Recv complete: from 30 - task_id: 69 
+MASTER> MPI_Send complete: master -> 30 (base-rank) - task_id: 77
+WORKGROUP [3] > MPI_Recv complete : task 406a70 77 55
+WORKGROUP [3] > MPI_Bcast complete : worker_rank [0] task 406a70 77 55
+FORTRAN> check task_id,comm:   77   -2080374782
+MASTER> MPI_Recv complete: from 0 - task_id: 70 
+MASTER> MPI_Send complete: master -> 0 (base-rank) - task_id: 78
+WORKGROUP [0] > MPI_Recv complete : task 406a70 78 55
+WORKGROUP [0] > MPI_Bcast complete : worker_rank [0] task 406a70 78 55
+FORTRAN> check task_id,comm:   78   -2080374780
+MASTER> MPI_Recv complete: from 70 - task_id: 71 
+MASTER> MPI_Send complete: master -> 70 (base-rank) - task_id: 79
+WORKGROUP [7] > MPI_Recv complete : task 406a70 79 55
+WORKGROUP [7] > MPI_Bcast complete : worker_rank [0] task 406a70 79 55
+FORTRAN> check task_id,comm:   79   -2080374782
+MASTER> MPI_Recv complete: from 60 - task_id: 72 
+MASTER> MPI_Send complete: master -> 60 (base-rank) - task_id: 80
+WORKGROUP [6] > MPI_Recv complete : task 406a70 80 55
+WORKGROUP [6] > MPI_Bcast complete : worker_rank [0] task 406a70 80 55
+FORTRAN> check task_id,comm:   80   -2080374782
+MASTER> MPI_Recv complete: from 50 - task_id: 73 
+MASTER> MPI_Send complete: master -> 50 (base-rank) - task_id: 81
+WORKGROUP [5] > MPI_Recv complete : task 406a70 81 55
+WORKGROUP [5] > MPI_Bcast complete : worker_rank [0] task 406a70 81 55
+FORTRAN> check task_id,comm:   81   -2080374782
+MASTER> MPI_Recv complete: from 40 - task_id: 74 
+MASTER> MPI_Send complete: master -> 40 (base-rank) - task_id: 82
+WORKGROUP [4] > MPI_Recv complete : task 406a70 82 55
+WORKGROUP [4] > MPI_Bcast complete : worker_rank [0] task 406a70 82 55
+FORTRAN> check task_id,comm:   82   -2080374782
+MASTER> MPI_Recv complete: from 10 - task_id: 75 
+MASTER> MPI_Send complete: master -> 10 (base-rank) - task_id: 83
+WORKGROUP [1] > MPI_Recv complete : task 406a70 83 55
+WORKGROUP [1] > MPI_Bcast complete : worker_rank [0] task 406a70 83 55
+FORTRAN> check task_id,comm:   83   -2080374782
+MASTER> MPI_Recv complete: from 20 - task_id: 76 
+MASTER> MPI_Send complete: master -> 20 (base-rank) - task_id: 84
+WORKGROUP [2] > MPI_Recv complete : task 406a70 84 55
+WORKGROUP [2] > MPI_Bcast complete : worker_rank [0] task 406a70 84 55
+FORTRAN> check task_id,comm:   84   -2080374782
+MASTER> MPI_Recv complete: from 30 - task_id: 77 
+MASTER> MPI_Send complete: master -> 30 (base-rank) - task_id: 85
+WORKGROUP [3] > MPI_Recv complete : task 406a70 85 55
+WORKGROUP [3] > MPI_Bcast complete : worker_rank [0] task 406a70 85 55
+FORTRAN> check task_id,comm:   85   -2080374782
+MASTER> MPI_Recv complete: from 0 - task_id: 78 
+MASTER> MPI_Send complete: master -> 0 (base-rank) - task_id: 86
+WORKGROUP [0] > MPI_Recv complete : task 406a70 86 55
+WORKGROUP [0] > MPI_Bcast complete : worker_rank [0] task 406a70 86 55
+FORTRAN> check task_id,comm:   86   -2080374780
+MASTER> MPI_Recv complete: from 60 - task_id: 80 
+MASTER> MPI_Recv complete: from 40 - task_id: 82 
+MASTER> MPI_Recv complete: from 50 - task_id: 81 
+MASTER> MPI_Recv complete: from 70 - task_id: 79 
+MASTER> MPI_Recv complete: from 10 - task_id: 83 
+MASTER> MPI_Recv complete: from 20 - task_id: 84 
+MASTER> MPI_Recv complete: from 30 - task_id: 85 
+MASTER> MPI_Recv complete: from 0 - task_id: 86 
+MASTER - DIETAG > MPI_Send complete: master -> 0 (base-rank)
+MASTER - DIETAG > MPI_Send complete: master -> 10 (base-rank)
+WORKGROUP [0] > MPI_Recv DIETAG complete
+Finalising Workgroups > base_rank : 11 - workgroup_tag 1 -  wr / ws: 1 / 10 
+WORKGROUP [1] > MPI_Recv DIETAG complete
+WORKGROUP [1] > MPI_Bcast complete : worker_rank [0] task 57 80 666
+Finalising Workgroups > base_rank : 10 - workgroup_tag 1 -  wr / ws: 0 / 10 
+Finalising Workgroups > base_rank : 13 - workgroup_tag 1 -  wr / ws: 3 / 10 
+Finalising Workgroups > base_rank : 12 - workgroup_tag 1 -  wr / ws: 2 / 10 
+Finalising Workgroups > base_rank : 15 - workgroup_tag 1 -  wr / ws: 5 / 10 
+Finalising Workgroups > base_rank : 14 - workgroup_tag 1 -  wr / ws: 4 / 10 
+Finalising Workgroups > base_rank : 17 - workgroup_tag 1 -  wr / ws: 7 / 10 
+Finalising Workgroups > base_rank : 16 - workgroup_tag 1 -  wr / ws: 6 / 10 
+Finalising Workgroups > base_rank : 19 - workgroup_tag 1 -  wr / ws: 9 / 10 
+Finalising Workgroups > base_rank : 18 - workgroup_tag 1 -  wr / ws: 8 / 10 
+MASTER - DIETAG > MPI_Send complete: master -> 20 (base-rank)
+MASTER - DIETAG > MPI_Send complete: master -> 30 (base-rank)
+MASTER - DIETAG > MPI_Send complete: master -> 40 (base-rank)
+MASTER - DIETAG > MPI_Send complete: master -> 50 (base-rank)
+MASTER - DIETAG > MPI_Send complete: master -> 60 (base-rank)
+MASTER - DIETAG > MPI_Send complete: master -> 70 (base-rank)
+Finalising MASTER > 
+Finalising Workgroups > base_rank : 21 - workgroup_tag 2 -  wr / ws: 1 / 10 
+Finalising Workgroups > base_rank : 23 - workgroup_tag 2 -  wr / ws: 3 / 10 
+Finalising Workgroups > base_rank : 25 - workgroup_tag 2 -  wr / ws: 5 / 10 
+Finalising Workgroups > base_rank : 27 - workgroup_tag 2 -  wr / ws: 7 / 10 
+Finalising Workgroups > base_rank : 29 - workgroup_tag 2 -  wr / ws: 9 / 10 
+Finalising Workgroups > base_rank : 31 - workgroup_tag 3 -  wr / ws: 1 / 10 
+Finalising Workgroups > base_rank : 33 - workgroup_tag 3 -  wr / ws: 3 / 10 
+Finalising Workgroups > base_rank : 35 - workgroup_tag 3 -  wr / ws: 5 / 10 
+Finalising Workgroups > base_rank : 37 - workgroup_tag 3 -  wr / ws: 7 / 10 
+Finalising Workgroups > base_rank : 41 - workgroup_tag 4 -  wr / ws: 1 / 10 
+Finalising Workgroups > base_rank : 43 - workgroup_tag 4 -  wr / ws: 3 / 10 
+Finalising Workgroups > base_rank : 45 - workgroup_tag 4 -  wr / ws: 5 / 10 
+Finalising Workgroups > base_rank : 47 - workgroup_tag 4 -  wr / ws: 7 / 10 
+Finalising Workgroups > base_rank : 49 - workgroup_tag 4 -  wr / ws: 9 / 10 
+Finalising Workgroups > base_rank : 51 - workgroup_tag 5 -  wr / ws: 1 / 10 
+Finalising Workgroups > base_rank : 53 - workgroup_tag 5 -  wr / ws: 3 / 10 
+Finalising Workgroups > base_rank : 55 - workgroup_tag 5 -  wr / ws: 5 / 10 
+Finalising Workgroups > base_rank : 57 - workgroup_tag 5 -  wr / ws: 7 / 10 
+Finalising Workgroups > base_rank : 59 - workgroup_tag 5 -  wr / ws: 9 / 10 
+Finalising Workgroups > base_rank : 61 - workgroup_tag 6 -  wr / ws: 1 / 10 
+Finalising Workgroups > base_rank : 63 - workgroup_tag 6 -  wr / ws: 3 / 10 
+Finalising Workgroups > base_rank : 65 - workgroup_tag 6 -  wr / ws: 5 / 10 
+Finalising Workgroups > base_rank : 67 - workgroup_tag 6 -  wr / ws: 7 / 10 
+Finalising Workgroups > base_rank : 69 - workgroup_tag 6 -  wr / ws: 9 / 10 
+Finalising Workgroups > base_rank : 71 - workgroup_tag 7 -  wr / ws: 1 / 9 
+Finalising Workgroups > base_rank : 73 - workgroup_tag 7 -  wr / ws: 3 / 9 
+Finalising Workgroups > base_rank : 75 - workgroup_tag 7 -  wr / ws: 5 / 9 
+Finalising Workgroups > base_rank : 77 - workgroup_tag 7 -  wr / ws: 7 / 9 
+WORKGROUP [2] > MPI_Recv DIETAG complete
+WORKGROUP [2] > MPI_Bcast complete : worker_rank [0] task 57 80 666
+Finalising Workgroups > base_rank : 20 - workgroup_tag 2 -  wr / ws: 0 / 10 
+WORKGROUP [3] > MPI_Recv DIETAG complete
+WORKGROUP [3] > MPI_Bcast complete : worker_rank [0] task 57 80 666
+Finalising Workgroups > base_rank : 30 - workgroup_tag 3 -  wr / ws: 0 / 10 
+WORKGROUP [4] > MPI_Recv DIETAG complete
+WORKGROUP [4] > MPI_Bcast complete : worker_rank [0] task 57 80 666
+Finalising Workgroups > base_rank : 40 - workgroup_tag 4 -  wr / ws: 0 / 10 
+WORKGROUP [5] > MPI_Recv DIETAG complete
+WORKGROUP [5] > MPI_Bcast complete : worker_rank [0] task 57 80 666
+Finalising Workgroups > base_rank : 50 - workgroup_tag 5 -  wr / ws: 0 / 10 
+WORKGROUP [6] > MPI_Recv DIETAG complete
+WORKGROUP [6] > MPI_Bcast complete : worker_rank [0] task 57 80 666
+Finalising Workgroups > base_rank : 60 - workgroup_tag 6 -  wr / ws: 0 / 10 
+Finalising Workgroups > base_rank : 1 - workgroup_tag 0 -  wr / ws: 1 / 10 
+Finalising Workgroups > base_rank : 22 - workgroup_tag 2 -  wr / ws: 2 / 10 
+Finalising Workgroups > base_rank : 3 - workgroup_tag 0 -  wr / ws: 3 / 10 
+Finalising Workgroups > base_rank : 24 - workgroup_tag 2 -  wr / ws: 4 / 10 
+Finalising Workgroups > base_rank : 5 - workgroup_tag 0 -  wr / ws: 5 / 10 
+Finalising Workgroups > base_rank : 26 - workgroup_tag 2 -  wr / ws: 6 / 10 
+Finalising Workgroups > base_rank : 7 - workgroup_tag 0 -  wr / ws: 7 / 10 
+Finalising Workgroups > base_rank : 28 - workgroup_tag 2 -  wr / ws: 8 / 10 
+Finalising Workgroups > base_rank : 9 - workgroup_tag 0 -  wr / ws: 9 / 10 
+Finalising Workgroups > base_rank : 32 - workgroup_tag 3 -  wr / ws: 2 / 10 
+Finalising Workgroups > base_rank : 34 - workgroup_tag 3 -  wr / ws: 4 / 10 
+Finalising Workgroups > base_rank : 36 - workgroup_tag 3 -  wr / ws: 6 / 10 
+Finalising Workgroups > base_rank : 38 - workgroup_tag 3 -  wr / ws: 8 / 10 
+Finalising Workgroups > base_rank : 42 - workgroup_tag 4 -  wr / ws: 2 / 10 
+Finalising Workgroups > base_rank : 44 - workgroup_tag 4 -  wr / ws: 4 / 10 
+Finalising Workgroups > base_rank : 46 - workgroup_tag 4 -  wr / ws: 6 / 10 
+Finalising Workgroups > base_rank : 48 - workgroup_tag 4 -  wr / ws: 8 / 10 
+Finalising Workgroups > base_rank : 52 - workgroup_tag 5 -  wr / ws: 2 / 10 
+Finalising Workgroups > base_rank : 54 - workgroup_tag 5 -  wr / ws: 4 / 10 
+Finalising Workgroups > base_rank : 56 - workgroup_tag 5 -  wr / ws: 6 / 10 
+Finalising Workgroups > base_rank : 58 - workgroup_tag 5 -  wr / ws: 8 / 10 
+Finalising Workgroups > base_rank : 62 - workgroup_tag 6 -  wr / ws: 2 / 10 
+Finalising Workgroups > base_rank : 64 - workgroup_tag 6 -  wr / ws: 4 / 10 
+Finalising Workgroups > base_rank : 66 - workgroup_tag 6 -  wr / ws: 6 / 10 
+Finalising Workgroups > base_rank : 68 - workgroup_tag 6 -  wr / ws: 8 / 10 
+WORKGROUP [7] > MPI_Recv DIETAG complete
+WORKGROUP [7] > MPI_Bcast complete : worker_rank [0] task 57 80 666
+Finalising Workgroups > base_rank : 70 - workgroup_tag 7 -  wr / ws: 0 / 9 
+Finalising Workgroups > base_rank : 72 - workgroup_tag 7 -  wr / ws: 2 / 9 
+Finalising Workgroups > base_rank : 74 - workgroup_tag 7 -  wr / ws: 4 / 9 
+Finalising Workgroups > base_rank : 76 - workgroup_tag 7 -  wr / ws: 6 / 9 
+Finalising Workgroups > base_rank : 78 - workgroup_tag 7 -  wr / ws: 8 / 9 
+WORKGROUP [0] > MPI_Bcast complete : worker_rank [0] task 57 80 666
+Finalising Workgroups > base_rank : 2 - workgroup_tag 0 -  wr / ws: 2 / 10 
+Finalising Workgroups > base_rank : 4 - workgroup_tag 0 -  wr / ws: 4 / 10 
+Finalising Workgroups > base_rank : 6 - workgroup_tag 0 -  wr / ws: 6 / 10 
+Finalising Workgroups > base_rank : 8 - workgroup_tag 0 -  wr / ws: 8 / 10 
+Finalising Workgroups > base_rank : 0 - workgroup_tag 0 -  wr / ws: 0 / 10 
+Finalising Workgroups > base_rank : 39 - workgroup_tag 3 -  wr / ws: 9 / 10 

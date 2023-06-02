@@ -1,11 +1,13 @@
-subroutine fortran_subprogram_pi( comm, task_id )
+subroutine fortran_subprogram_pi( comm, task_id ) bind(C,name="fortran_subprogram_pi")
 
+  use iso_c_binding 
   use mpi
 
   implicit none
 
   ! subroutine args 
-  integer, intent(in) :: comm, task_id
+  integer(c_int), intent(inout) :: comm
+  integer(c_int), intent(in) :: task_id
  
   ! same with main variables
   integer :: rank, size, ierr
@@ -25,8 +27,12 @@ subroutine fortran_subprogram_pi( comm, task_id )
 
   allocate(res(iter_max))
 
-  call MPI_Comm_rank(MPI_COMM_WORLD, rank, ierr)
-  call MPI_Comm_size(MPI_COMM_WORLD, size, ierr)
+  call MPI_Comm_rank(comm, rank, ierr)
+  call MPI_Comm_size(comm, size, ierr)
+
+  if( rank == 0 ) then
+    write(*,'(a,I4,I14)') "FORTRAN> check task_id,comm: ", task_id, comm
+  end if 
 
   call random_seed()
 
@@ -36,6 +42,8 @@ subroutine fortran_subprogram_pi( comm, task_id )
   ! filename set
   write(temp,*) task_id
   write(filename,'(a)') adjustl("task_id_"//trim(adjustl(temp)))
+
+  ! call sflag(rank,1,task_id)
 
   ! file open
   if ( rank == 0 ) then
@@ -58,9 +66,9 @@ subroutine fortran_subprogram_pi( comm, task_id )
 
     end do
 
-    call MPI_Reduce(N_inside,N_total_inside,1,MPI_INT,MPI_SUM,root,MPI_COMM_WORLD,ierr)
+    call MPI_Reduce(N_inside,N_total_inside,1,MPI_INT,MPI_SUM,root,comm,ierr)
     pi_local = 4.0 * real(N_inside) / real(N_local)
-    call MPI_REDUCE(pi_local,pi_total,1,MPI_DOUBLE_PRECISION,MPI_SUM,root,MPI_COMM_WORLD,ierr)
+    call MPI_Reduce(pi_local,pi_total,1,MPI_DOUBLE_PRECISION,MPI_SUM,root,comm,ierr)
 
     res(iter) = pi_total
     N_inside = 0
@@ -107,5 +115,12 @@ contains
 
     return
   end function getCurrentDateTime
+
+  subroutine sflag( rank, flag, task_id )
+    integer, intent(in) :: rank,flag,task_id
+    if( rank == 0 ) then
+      write(*,'(a,I4,I4)') "F> flag task_id: ", flag, task_id
+    end if
+  end subroutine
 
 end subroutine fortran_subprogram_pi

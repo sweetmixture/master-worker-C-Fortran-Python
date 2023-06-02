@@ -9,7 +9,7 @@
 
 #define TASK_DIETAG  666
 
-typedef void (*taskfunction_ptr)( const MPI_Comm* , int );
+typedef void (*taskfunction_ptr)( const MPI_Comm* , int* );
 
 typedef struct function_task_{
 

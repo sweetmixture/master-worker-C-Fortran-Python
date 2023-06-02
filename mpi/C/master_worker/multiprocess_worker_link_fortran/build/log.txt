@@ -1,0 +1,6 @@
+WORKGROUP [0] > MPI_Recv complete : task 406a40 0 55
+WORKGROUP [1] > MPI_Recv complete : task 406a40 1 55
+MASTER - Initial task send > MPI_Isend complete: master -> 0 (base-rank) with [ tag, size ] = [ 0, 10 ] - task_id: 0 
+MASTER - Initial task send > MPI_Isend complete: master -> 10 (base-rank) with [ tag, size ] = [ 1, 9 ] - task_id: 1 
+[mpiexec@login02] Sending Ctrl-C to processes as requested
+[mpiexec@login02] Press Ctrl-C again to force abort

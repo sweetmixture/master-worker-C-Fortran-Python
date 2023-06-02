@@ -12,6 +12,11 @@
 // get_task_result()
 // logger
 
+// extern void fortran_subprogram_pi( const MPI_Comm* , int* ); // in subprogram.h
+/* subroutine fortran_subprogram_pi( comm, task_id ) bind(C,name="fortran_subprogram_pi")
+ * integer(c_int), intent(inout) :: comm, task_id
+ */
+
 function_task* get_next_task( function_task* task_array, const int task_count, int* sent_task_count )
 {
 	//printf("task_count / sent_task_count : %d / %d\n",task_count,*sent_task_count);
@@ -34,7 +39,8 @@ void master_worker_task_call_master( const MPI_Comm* base_comm, const WorkgroupC
 	int sent_task_count = 0;
 	function_task* task_array = malloc(task_count*sizeof(function_task));
 	for(int i=0;i<task_count;i++){
-		task_array[i].fp = subprogram_pi;
+		//task_array[i].fp = subprogram_pi;
+		task_array[i].fp = fortran_subprogram_pi;
 		task_array[i].task_id = i;
 		task_array[i].task_status = TASK_INIT;
 	}
@@ -140,7 +146,9 @@ void master_worker_task_call_workgroup( const MPI_Comm* base_comm, const MPI_Com
 			if( n == workgroup_tag ){
 
 				MPI_Bcast(&task,sizeof(function_task),MPI_CHAR,0,*workgroup_comm);
-				//printf("WORKGROUP [%d] > MPI_Bcast complete : worker_rank [%d] task %x %d %d\n",workgroup_tag,worker_rank,task.fp,task.task_id,task.task_status);
+				if( worker_rank == 0 ){
+					printf("WORKGROUP [%d] > MPI_Bcast complete : worker_rank [%d] task %x %d %d\n",workgroup_tag,worker_rank,task.fp,task.task_id,task.task_status);
+				}
 				
 				if( task.task_status == TASK_DIETAG ){
 					return;
@@ -148,13 +156,16 @@ void master_worker_task_call_workgroup( const MPI_Comm* base_comm, const MPI_Com
 
 				//execution
 				task.task_status = TASK_EXECUTED;
-				task.fp(workgroup_comm,task.task_id);
+				//if( worker_rank == 0 ){ printf("before run / status %d\n",task.task_status); }
+				task.fp(workgroup_comm,&task.task_id);
 				task.task_status = TASK_FINISHED;
+				//if( worker_rank == 0 ){ printf("after  run / status %d\n",task.task_status); }
 
 				// setup result;
 				res.task_status = TASK_FINISHED;
 				res.task_id = task.task_id;
 
+				// send back to Master
 				if( worker_rank == 0 ){
 					MPI_Send(&res,sizeof(result_package),MPI_CHAR,master_base_rank,res.task_status,*base_comm);
 				}
